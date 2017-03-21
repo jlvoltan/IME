@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bianca, Maciel e Rocha --> 
+<curriculo>
+    <cabecalho>
+         <infopessoal>
+            <nomeCompleto>Bianca de Carvalho Lodoli</nomeCompleto>
+            <Idade>22</Idade>
+            <email >blodoli@icloud.com</email>
+             <endereco>
+                <rua>Rua Bartolomeu Portela</rua>
+                <numero>18</numero>
+                <complemento>bl 1 apto 303</complemento>
+                <bairro>Botafogo</bairro>
+                <cidade> Rio de Janeiro</cidade>
+                <estado>RJ</estado>
+            </endereco>
+            <CPF>Não Informado</CPF>  
+        </infopessoal> 
+    </cabecalho>
+    
+    
+    
+
+   <formacao>
+		<titulacao tipo="Ensino Superior">
+			<instituicao>Instituto Militar de Engenharia</instituicao>
+			<especialidade>Engenharia de Computação</especialidade>
+                        <anodeformatura>2016</anodeformatura>
+			<situacao>7º periodo</situacao>
+		</titulacao>
+		<titulacao tipo="Pos-Graduacao">
+			<instituicao >Fundação Getúlio Vargas</instituicao>
+			<especialidade>Mestrado em Modelagem Matematica</especialidade>
+			<anoformatura>2016</anoformatura>
+		</titulacao>
+   </formacao>
+   
+   
+   <proficienciaLinguistica>
+    <Lingua  idioma="Ingles">
+	<le>Avançado</le>
+	<escreve>Avançado</escreve>
+	<fala>Avançado</fala>
+	<entende>Avançado</entende>		
+    </Lingua>
+    </proficienciaLinguistica>
+    
+   <experiencia>
+		<trabalho cargo="Estagiario">
+			<empresa >Target Solutions</empresa>
+                        <inicio>outubro/2014</inicio>
+			<termino>março/2015</termino>
+			<resumo>Parte da equipe de desenvolvimento de site e aplicativo multiplataforma web (iPhone, Androide e Windows Phone) para gerenciamento inteligente de filas. Site em php usando o framework Yii e aplicativo web usando AngularJS, Bootstrap e Cordova.</resumo>		
+		</trabalho>
+   </experiencia>
+   
+   
+   
+   <listaComplementos>
+		<complemento>
+			<atividade>Iniciacao Cientifica: Desenvolimento de interface gráfica para desenho CSG para iPhone.</atividade>
+			<inicio>fevereiro/2013</inicio>
+                        <termino>agosto/2013</termino>
+		</complemento>
+    </listaComplementos>            
+                
+                
+    <listaComplementos> 
+                <complemento>           
+			<atividade>Iniciacao Cientifica: Estudo de parâmetros espectrais em grafos aleatórios.</atividade>
+				<inicio>agosto/2014</inicio>
+                </complemento>         
+    </listaComplementos>
+</curriculo>

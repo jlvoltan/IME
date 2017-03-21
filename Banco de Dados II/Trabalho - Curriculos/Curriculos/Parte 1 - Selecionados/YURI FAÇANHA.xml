@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculo>
+	<cabecalho>
+		<infopessoal>
+			<nome>Yuri Façanha</nome>
+			<dataNascimento>10/12/1994</dataNascimento>
+			<email>yurifacanha1994@gmail.com</email>
+			<endereco>
+				<estado>CE</estado>
+				<cidade>Fortaleza</cidade>
+				<bairro>Piedade</bairro>
+				<rua>Rua Gonçalves Ledo</rua>
+				<numero>2850</numero>
+				<complemento></complemento>
+			</endereco>
+			<CPF>048.935.583-82</CPF>
+		</infopessoal>
+	</cabecalho>
+	<formacao>
+		<titulacao tipo="Ensino Superior">
+			<instituicao>Instituto Militar de Engenharia</instituicao>
+			<especialidade>Engenharia de Computação</especialidade>
+			<anodeformatura>2018</anodeformatura>
+		</titulacao>
+		<titulacao tipo="Ensino Medio">
+			<instituicao>Farias Brito</instituicao>
+			<especialidade></especialidade>
+			<anodeformatura>2013</anodeformatura>
+		</titulacao>
+	</formacao>
+	<listaIdiomas>
+		<idioma nome="Português"> Nativo </idioma>
+		<idioma nome="Inglês"> Básico </idioma>
+	</listaIdiomas>
+	<experiencia></experiencia>
+	<listaComplementos>
+	<complemento><atividade>Formação e experiência militar (Exército Brasileiro).</atividade></complemento>
+	</listaComplementos>
+</curriculo>

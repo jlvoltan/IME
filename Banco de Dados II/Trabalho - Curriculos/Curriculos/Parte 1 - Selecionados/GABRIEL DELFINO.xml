@@ -1,0 +1,45 @@
+<curriculo>
+	<cabecalho>
+		<infopessoal>
+			<nome>Gabriel Delfino</nome>
+			<dataNascimento>03/10/1994</dataNascimento>
+			<email>gabrielmdelfino@gmail.com</email>
+			<endereco>
+				<estado>MG</estado>
+				<cidade>Belo Horizonte</cidade>
+				<bairro>Funcionários</bairro>
+				<rua>Rua Levindo Lopes</rua>
+				<numero>36</numero>
+				<complemento>apto 801</complemento>
+			</endereco>
+			<CPF>117.349.456-13</CPF>
+		</infopessoal>
+	</cabecalho>
+
+	<formacao>
+		<titulacao tipo="Ensino Medio">
+			<instituicao>Colegio Bernoulli</instituicao>
+			<especialidade></especialidade>
+			<anodeformatura>2012</anodeformatura>
+		</titulacao>
+
+		<titulacao tipo="Ensino Superior">
+			<instituicao>Instituto Militar de Engenharia</instituicao>
+			<especialidade>Engenharia de Computação</especialidade>
+			<anodeformatura>2018</anodeformatura>
+		</titulacao>
+	</formacao>
+
+
+	<listaIdiomas>
+			<idioma nome="Ingles">Fluente (FCE Nível B2 pela Universidade de Cambridge)</idioma>
+			<idioma nome="Espanhol">Intermediário</idioma>
+	</listaIdiomas>
+	<experiencia></experiencia>
+
+	<listaComplementos>
+		<complemento><atividade>Formação e experiência militar (Exército Brasileiro).</atividade></complemento>
+		<complemento><atividade>Iniciação cientifica na área de simulações computacionais em linguagem MCNPX com foco em ações de resposta a acidentes radiológicos (PIBITI 2015/16). </atividade></complemento>
+		<complemento><atividade>Iniciação científica na área de engenharia nuclear com foco na saúde pública e controle do vetor Aedes aegypti (PIBITI 2016/17).</atividade></complemento>
+	</listaComplementos>
+</curriculo>

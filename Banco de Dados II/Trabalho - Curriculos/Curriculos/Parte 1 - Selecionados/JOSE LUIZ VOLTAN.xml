@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<curriculo>
+    <cabecalho>
+        <infopessoal>
+            <nomeCompleto>José Luiz Neves Voltan</nomeCompleto>  
+            <dataNascimento>11/07/1990</dataNascimento>
+            <email>jlvoltan@hotmail.com</email>
+            <endereco>
+                <rua> Aquidabã</rua>
+                <numero>320</numero>
+                <complemento>Apt 403 Bloco 2</complemento> 
+                <cidade>Rio de Janeiro</cidade>
+                <bairro>Meier</bairro>
+                <estado>RJ</estado>
+            </endereco>
+            <CPF>11910416703</CPF>
+            
+        </infopessoal>
+    </cabecalho>
+    
+    <formacao>
+         <titulacao tipo="Ensino Superior">
+                <instituicao>AMAN</instituicao>
+                <especialidade>Graduação em Ciências Militares. </especialidade>
+                <anoFormatura>2012</anoFormatura>
+                <local>Academia Militar das Agulhas Negras</local>
+                <sigla>AMAN</sigla>
+                <pais>Brasil</pais>
+                <situacao>Concluída</situacao>
+        </titulacao>
+        <titulacao tipo="Ensino Superior">
+            <instituicao>IME</instituicao>
+                <especialidade>Graduação em Engenharia da Computação. </especialidade>
+                <anoFormatura>2018</anoFormatura>
+                <situacao>Em andamento</situacao>
+        </titulacao>
+     </formacao>
+     
+     <proficiencia_linguistica>
+        <idioma nome="portugues">Nativo</idioma>
+        <idioma nome="ingles">Iniciante</idioma>
+    </proficiencia_linguistica>
+    
+    <experiencia>
+        <trabalho tipo="Primeiro">
+            <empresa>Exercito</empresa> 
+            <inicio>2008</inicio>
+            <termino>atual</termino>
+            <resumo>Desenvolveu diversas atividades dentre elas Comandante de Pelotão, Chefe da Seção de Informática - 18ºBLog, Instrutor dos Estágios de Adaptação ao Serviço e Básico de Sargento Temporário.</resumo>
+        </trabalho>
+    </experiencia>
+    
+        <FormacaoComplementar>
+            <curso empresa="HARRIS">
+                <descricao>Estágio Avançado para Instrutores</descricao>
+                <periodo>2013</periodo>
+                <local>14ª Cia Com / Harris Corporation</local>
+                <sigla>HARRIS</sigla>
+                <pais>Brasil</pais>
+                <situacao>Concluido</situacao>
+                <resumo>Estágio Avançado para Instrutores de Operação e Programação dos Transceptores Harris MPR-9600-MP(120 horas), RF-7800S(80 horas) e RF-7800V-HH (120 horas)</resumo> 
+            </curso>
+        </FormacaoComplementar>
+  
+</curriculo>

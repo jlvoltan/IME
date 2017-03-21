@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<Curriculum_vitae>
+
+	<Dados_Pessoais atualizado = "sim">
+		<Nome>
+			Pedro Igor de Araújo Oliveira
+		</Nome>
+		<Nascimento>
+			<Data>
+				<Dia>
+					25
+				</Dia>
+				<Mes>
+					Novembro
+				</Mes>
+				<Ano>
+					1994
+				</Ano>
+			</Data>
+			<Cidade>
+				João Monlevade
+			</Cidade>
+			<Estado>
+				Minas Gerais
+			</Estado>
+			<Pais>
+				Brasil
+			</Pais>
+		</Nascimento>
+		<Parentesco>
+			<Mae>
+				Aparecida Maria Araújo Oliveira
+			</Mae>
+			<Pai>
+				Wagner de Sá Oliveira
+			</Pai>
+		</Parentesco>
+		<Contato>
+			<email>
+				pedroigorao@hotmail.com
+			</email>
+			<Celular>
+				+55 31 99649 1506
+			</Celular>
+			<Github>
+				pedroig
+			</Github>
+			<Endereco>
+				<Rua>
+					Praça General Tibúrcio
+				</Rua>
+				<Numero>
+					80
+				</Numero>
+				<Bairro>
+					Urca
+				</Bairro>
+				<Cidade>
+					Rio de Janeiro
+				</Cidade>
+				<CEP>
+					22290-270
+				</CEP>
+				<Complemento opcional = "sim">
+					IME
+				</Complemento>
+			</Endereco>
+		</Contato>
+	</Dados_Pessoais>
+
+	<Formacao_Escolar>
+
+		<Ensino_Medio>
+			<Colegio>
+				Bernoulli
+			</Colegio>
+			<Cidade>
+				Belo Horizonte
+			</Cidade>
+			<Periodo>
+				<Ano_inicio>
+					2010
+				</Ano_inicio>
+				<Ano_fim>
+					2012
+				</Ano_fim>
+			</Periodo>
+		</Ensino_Medio>
+
+		<Ensino_Superior>
+			<Faculdade>
+				Instituto Militar de Engenharia
+			</Faculdade>
+			<Periodo>
+				<Ano_inicio>
+					2014
+				</Ano_inicio>
+				<Ano_fim veracidade = "Previsão">
+					2018
+				</Ano_fim>
+			</Periodo>
+			<Coeficiente_Rendimento Completude = "Parcial">
+				8,84
+			</Coeficiente_Rendimento>
+			<Curso>
+				Engenharia de Computação
+			</Curso>
+		</Ensino_Superior>
+
+	</Formacao_Escolar>
+
+	<Experiencia_profissional>
+	</Experiencia_profissional>
+
+	<Qualificacoes_Complementares>
+		<Idiomas>
+			<Ingles>
+				<Nivel>
+					Avançado
+				</Nivel>
+				<Certificados>
+					<TOEFL validade = "ativa">
+						<Nota nota_max = "120">
+							105
+						</Nota>
+					</TOEFL>
+				</Certificados>
+			</Ingles>
+		</Idiomas>
+	</Qualificacoes_Complementares>
+
+	<Premiacoes>
+		<ACM-ICPC ano = "2016" fase = "Subregional">
+			<Local>
+				Rio de Janeiro
+			</Local>
+			<Posicao>
+				Terceiro lugar
+			</Posicao>
+		</ACM-ICPC>
+	</Premiacoes>
+
+</Curriculum_vitae>

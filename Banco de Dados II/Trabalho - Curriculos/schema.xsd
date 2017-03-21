@@ -1,0 +1,301 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="anodeformatura" type="xs:short"/>
+	<!--
+ O uso do Ref permite uma leitura mais facil, alem de usarmos o mesmo elemento varias vezes
+-->
+	<xs:element name="anoformatura" type="xs:short"/>
+	<xs:element name="anoFormatura" type="xs:short"/>
+	<xs:element name="conclusao" type="xs:short"/>
+	<xs:element name="entende" type="xs:string"/>
+	<xs:element name="fala" type="xs:string"/>
+	<xs:element name="escreve" type="xs:string"/>
+	<xs:element name="le" type="xs:string"/>
+	<xs:element name="estado" type="xs:string"/>
+	<xs:element name="cidade" type="xs:string"/>
+	<xs:element name="bairro" type="xs:string"/>
+	<xs:element name="rua" type="xs:string"/>
+	<xs:element name="numero" type="xs:short"/>
+	<xs:element name="complemento" type="xs:string"/>
+	<xs:element name="pais" type="xs:string"/>
+	<xs:element name="curriculo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<!--  dados pessoais 1  -->
+					<xs:element name="cabecalho">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="infopessoal">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:choice>
+												<xs:element name="nome" type="xs:string"/>
+												<!--
+ Com o uso do Choice podemos aceitar tanto nome como nomeCompleto 
+-->
+												<xs:element name="nomeCompleto" type="xs:string"/>
+											</xs:choice>
+											<xs:element minOccurs="0" name="dataNascimento" type="xs:string"/>
+											<!--
+ Com o uso do Choice podemos aceitar tanto dataNascimento como a idade 
+-->
+											<xs:element minOccurs="0" name="Idade">
+												<!--
+ Como a minima ocorrencia de idade eh 0 , nao tem problema se o curriculo nao possuir
+-->
+												<xs:simpleType>
+													<xs:restriction base="xs:integer">
+														<!--  Assim conseguimos restringir a idade entre 0 e 100 -->
+														<xs:minInclusive value="0"/>
+														<!--
+ Como a idade eh sempre um numero inteiro , estamos usando um tipo interger
+-->
+														<xs:maxInclusive value="100"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element minOccurs="0" name="email" type="xs:string"/>
+											<xs:element name="endereco">
+												<xs:complexType>
+													<xs:all>
+														<!--
+Com a TAG ALL a sequencia nao importa, vimos que o endereco em especial, cada pessoa colocava em uma sequencia diferente
+-->
+														<xs:element ref="estado"/>
+														<xs:element ref="cidade"/>
+														<xs:element ref="bairro"/>
+														<xs:element ref="rua"/>
+														<xs:element ref="numero"/>
+														<xs:element minOccurs="0" ref="complemento"/>
+														<xs:element minOccurs="0" ref="pais"/>
+														<!-- Tambem usamos esse elemento em instituicao -->
+													</xs:all>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="CPF" type="xs:string"/>
+											<!--
+Preferimos usar o cpf como string e nao um numero, pois assim nao temos problemas com as pessoas que usam . ou - no campo
+-->
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+				<!--  FORMACAO -->
+				<xs:element name="formacao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="5" minOccurs="1" name="titulacao">
+								<!--
+ Estamos obrigando a ter alguma titulacao, e no maximo 5
+-->
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="instituicao" type="xs:string"/>
+										<xs:element name="especialidade" type="xs:string"/>
+										<xs:choice>
+											<!--
+Haviam muitas variacoes nesse campo, por isso o choice
+-->
+											<xs:element ref="anodeformatura"/>
+											<xs:element ref="anoformatura"/>
+											<xs:element ref="anoFormatura"/>
+											<xs:element ref="conclusao"/>
+										</xs:choice>
+										<xs:element minOccurs="0" name="local" type="xs:string"/>
+										<xs:element minOccurs="0" name="sigla" type="xs:string"/>
+										<xs:element minOccurs="0" ref="pais"/>
+										<!--
+Estamos usando o mesmo elemento que usamos em endereco, referenciado no inicio do esquema
+-->
+										<xs:element minOccurs="0" name="situacao" type="xs:string"/>
+										<xs:element minOccurs="0" ref="cidade"/>
+										<!--
+Estamos usando o mesmo elemento que usamos em endereco, referenciado no inicio do esquema
+-->
+									</xs:sequence>
+									<xs:attribute name="tipo" use="optional">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Ensino Medio"/>
+												<xs:enumeration value="Ensino Superior"/>
+												<xs:enumeration value="Ensino_Superior"/>
+												<xs:enumeration value="ensino superior"/>
+												<xs:enumeration value="ensino medio"/>
+												<xs:enumeration value="Medio"/>
+												<xs:enumeration value="Superior"/>
+												<xs:enumeration value="Mestrado"/>
+												<xs:enumeration value="Doutorado"/>
+												<xs:enumeration value="Pos-graduacao"/>
+												<xs:enumeration value="Pos-Graduacao"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!--  IDIOMAS  -->
+				<xs:choice minOccurs="0">
+					<!--
+ Tambem haviam 3 formatos de informacoes referentes a linguas possiveis por isso o choice
+-->
+					<xs:element name="listaIdiomas">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0" name="idioma">
+									<!--
+ Esse 1o era o formato mais simples, <idioma nome=portugues>nativo<idioma>-->
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="xs:string">
+												<!--
+ Mesmo assim, existiam 3 formas de se referir ao atributo
+-->
+												<xs:attribute name="nome" type="xs:string" use="optional"/>
+												<xs:attribute name="lingua" type="xs:string" use="optional"/>
+												<xs:attribute name="idioma" type="xs:string" use="optional"/>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<!--  OU ENTO  -->
+					<xs:element name="proficiencia_linguistica">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0" name="idioma">
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="xs:string">
+												<xs:attribute name="nome" type="xs:string"/>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<!--  OU ENTAO  -->
+					<xs:element name="proficienciaLinguistica">
+						<!--
+ Essa era a forma mais completa de se referir a um idioma, mostrando seu grau em cada habilidade do idioma
+-->
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0" name="Lingua">
+									<xs:complexType>
+										<xs:all>
+											<xs:element ref="entende"/>
+											<!--
+ A ordem da proficiencia nao ira importar, embora todos as 4 habilidades sejam obrigatorias 
+-->
+											<xs:element ref="fala"/>
+											<xs:element ref="escreve"/>
+											<xs:element ref="le"/>
+										</xs:all>
+										<xs:attribute name="idioma" type="xs:string"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+				<xs:element maxOccurs="3" minOccurs="0" name="experiencia">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="trabalho">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="empresa" type="xs:string"/>
+										<xs:element name="inicio" type="xs:string"/>
+										<xs:element name="termino" type="xs:string"/>
+										<xs:element minOccurs="0" name="resumo" type="xs:string"/>
+									</xs:sequence>
+									<xs:attribute name="tipo" type="xs:string" use="optional"/>
+									<xs:attribute name="cargo" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:choice>
+					<xs:element maxOccurs="1" minOccurs="0" name="FormacaoComplementar">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0" name="curso">
+									<xs:complexType>
+										<xs:all>
+											<!--  Usamos o ALL pois a ordem variava muito -->
+											<xs:element name="descricao" type="xs:string"/>
+											<xs:element name="periodo" type="xs:short"/>
+											<xs:element name="local" type="xs:string"/>
+											<xs:element minOccurs="0" name="sigla" type="xs:string"/>
+											<xs:element minOccurs="0" ref="pais"/>
+											<!--
+Novamente estamos usando o mesmo elemento cidado no inicio do esuema, e ja usado em endereco
+-->
+											<xs:element minOccurs="0" name="situacao" type="xs:string"/>
+											<xs:element minOccurs="0" name="resumo" type="xs:string"/>
+										</xs:all>
+										<xs:attribute name="empresa" type="xs:string" use="optional"/>
+										<xs:attribute name="nome" type="xs:string" use="optional"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<!-- ou entao -->
+					<xs:element name="extra">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="inst">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="nome" type="xs:string"/>
+											<xs:element name="ano">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="inicio" type="xs:short"/>
+															<xs:attribute name="termino" type="xs:short"/>
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+										<xs:attribute name="tag" type="xs:string"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+				<xs:element maxOccurs="4" minOccurs="0" name="listaComplementos">
+					<!--
+ E um campo onde as pessoas listavam feitos em geral, como um projeto, iniciacao cientifica...
+-->
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="complemento">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="atividade" type="xs:string"/>
+										<xs:element minOccurs="0" name="inicio" type="xs:string"/>
+										<xs:element minOccurs="0" name="termino" type="xs:string"/>
+									</xs:sequence>
+									<xs:attribute name="tipo" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

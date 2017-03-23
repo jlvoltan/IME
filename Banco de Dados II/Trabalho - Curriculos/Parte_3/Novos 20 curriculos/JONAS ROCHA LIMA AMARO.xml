@@ -1,0 +1,45 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Jonas Rocha Lima Amaro</nome>
+      <email>jonasrla@gmail.com</email>
+      <endereco>
+        <rua>Rua Voluntarios da Patria</rua>
+        <numero>98</numero>
+        <complemento>403</complemento>
+        <cidade>Rio de Janeiro</cidade>
+        <bairro>Botafogo</bairro>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2014</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <experiencia>
+    <trabalho>
+      <empresa>Integracao IME</empresa>
+      <inicio>2013</inicio>
+      <termino>2013</termino>
+      <resumo>Em 2013, fiz parte da Integracao IME, uma iniciativa dos alunos do IME que organiza eventos de recrutamento de empresas alem de trazer palestrantes influentes e ex-alunos que se destacaram.</resumo>
+    </trabalho>
+    <trabalho>
+      <empresa>IME junior</empresa>
+      <inicio>2011</inicio>
+      <termino>2013</termino>
+      <resumo>Participo da IME Junior desde agosto de 2011. Na empresa a cada periodo de um ano, tem-se troca de cargos, dessa forma fui gerente de Gestao de Pessoas, seguindo para diretor de Gestao de Pessoas e, agora, diretor Vice-Presidente. Na empresa tive oportunidade de desenvolver bastante atividades em grupo, como gestão do Processo Seletivo da empresa.</resumo>
+    </trabalho>
+    <trabalho>
+      <empresa>Projeto Eureka</empresa>
+      <inicio>2013</inicio>
+      <termino>2013</termino>
+      <resumo>O Projeto Eureka ocorreu no segundo semestre de 2013. Nessa oportunidade tive a oportunidade de desenvolver e um projeto de feira de ciencias com um colega do IME e tres crianças que estudam no nono ano da escola publica. A producao do experimento eh uma preocupação dos professores. Ja a apresentacao do projeto fica a cargo das criancas. Para que elas pudessem explicar o projeto foram ministradas algumas aulas. Os maiores desafios foi mante-las motivadas a continuar e entendendo as ciencias que em grande parte era novidade para elas.</resumo>
+    </trabalho>
+  </experiencia>
+</curriculo>

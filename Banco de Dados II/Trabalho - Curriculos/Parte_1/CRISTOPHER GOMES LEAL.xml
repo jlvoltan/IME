@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Aluno Cristopher Gomes Leal 	
-	grupo:Leal ,Zalla
--->
+
 <curriculum>
 	<cabecalho>
 		<dados-pessoais>
 			<nome>Cristopher Gomes Leal</nome>
 			<idade>22</idade>
+			<e-mail>cristopher.gomes.leal@gmail.com</e-mail>
 			<endereco>
 				<rua>Rua bras Cubas</rua>
 				<lote>34</lote>
@@ -15,18 +14,17 @@
 				<cidade>Duque de Caxias</cidade>
 				<UF>RJ</UF>
 			</endereco>
-			<e-mail>cristopher.gomes.leal@gmail.com</e-mail>
 		</dados-pessoais>
 	</cabecalho>
 	<formacao>
 		<formacao-item tipo="Graduacao">
 			<instituicao>Instituto Militar de Engenharia</instituicao>
-			<curso>Engenharia de Computação</curso>
+			<curso>Engenharia de Computacao</curso>
 			<conclusao>2016</conclusao>
 		</formacao-item>
 	</formacao>
 	<qualificacao>
-		<qualificacao-item nome="Ingles">Intermediário(Microcamp-4 anos ,conclusao 2012)
+		<qualificacao-item nome="Ingles">Intermediario(Microcamp-4 anos ,conclusao 2012)
 		</qualificacao-item>
 	</qualificacao>
 	<exp-prof>
@@ -37,4 +35,4 @@
 				</atividade>
 		</trabalho>
 	</exp-prof>
-	<info-adicional/>/</curriculum>
+</curriculum>

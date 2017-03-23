@@ -15,6 +15,7 @@
 	<xs:element name="bairro" type="xs:string"/>
 	<xs:element name="rua" type="xs:string"/>
 	<xs:element name="numero" type="xs:short"/>
+	<xs:element name="apto" type="xs:short"/>
 	<xs:element name="complemento" type="xs:string"/>
 	<xs:element name="pais" type="xs:string"/>
 	<xs:element name="curriculo">
@@ -62,9 +63,10 @@
 Com a TAG ALL a sequencia nao importa, vimos que o endereco em especial, cada pessoa colocava em uma sequencia diferente
 -->
 														<xs:element ref="cidade"/>
-														<xs:element ref="bairro"/>
 														<xs:element ref="rua"/>
 														<xs:element ref="numero"/>
+														<xs:element minOccurs="0" ref="bairro"/>
+														<xs:element minOccurs="0" ref="apto"/>
 														<xs:element minOccurs="0" ref="estado"/>
 														<xs:element minOccurs="0" ref="complemento"/>
 														<xs:element minOccurs="0" ref="pais"/>
@@ -213,8 +215,9 @@ Estamos usando o mesmo elemento que usamos em endereco, referenciado no inicio d
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="empresa" type="xs:string"/>
-										<xs:element name="inicio" type="xs:string"/>
-										<xs:element name="termino" type="xs:string"/>
+										<xs:element minOccurs="0" name="atividade" type="xs:string"/>
+										<xs:element minOccurs="0" name="inicio" type="xs:string"/>
+										<xs:element minOccurs="0" name="termino" type="xs:string"/>
 										<xs:element minOccurs="0" name="resumo" type="xs:string"/>
 									</xs:sequence>
 									<xs:attribute name="tipo" type="xs:string" use="optional"/>

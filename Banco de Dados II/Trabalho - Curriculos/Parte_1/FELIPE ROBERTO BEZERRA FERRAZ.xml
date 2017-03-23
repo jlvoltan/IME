@@ -37,13 +37,13 @@
             <termino>2016</termino>
             <resumo>Automatização do envio de relatórios Offshore por gestor</resumo>
         </trabalho>
+        <trabalho>
+            <empresa>Integracao IME</empresa>
+            <inicio>2013</inicio>
+            <termino>2015</termino>
+            <resumo>Diretor de conteudo - Buscar empresas para a realizacao de convênios com o IME e palestras. Com foco na Semana de Integracao, em que todos os dias empresas e palestrantes magnos tem contato direto com os alunos e podem compartilhar suas experiencias e processos </resumo>
+        </trabalho>
     </WorkExperience>
     <ComplementaryActivities>
-        <curso empresa="Integracao IME">
-            <descricao>Diretor de conteudo</descricao>
-            <periodo>2013-2015</periodo>
-            <situacao>Concluido</situacao>
-            <resumo>Buscar empresas para a realizacao de convênios com o IME e palestras. Com foco na Semana de Integracao, em que todos os dias empresas e palestrantes magnos tem contato direto com os alunos e podem compartilhar suas experiencias e processos </resumo>
-        </curso>
     </ComplementaryActivities>
 </CurriculumVitae>

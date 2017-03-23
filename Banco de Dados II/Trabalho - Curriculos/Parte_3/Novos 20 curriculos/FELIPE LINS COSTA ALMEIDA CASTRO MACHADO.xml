@@ -1,0 +1,38 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Felipe Lins Costa Almeida Castro Machado</nome>
+      <email>felipelm@gmail.com</email>
+      <endereco>
+        <rua>lauro Muller</rua>
+        <numero>86</numero>
+        <apto>1008</apto>
+        <bairro>Botafogo</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>RJ</estado>
+      </endereco>
+      <CPF>01065825166</CPF>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Engenharia de Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+    </titulacao>
+  </formacao>
+  <experiencia>
+    <trabalho>
+      <empresa>Slacam</empresa>
+      <inicio>2012</inicio>
+      <termino>2013</termino>
+      <resumo>Tecnologia da informacao</resumo>
+    </trabalho>
+    <trabalho>
+      <empresa>Fundação Trompowsky</empresa>
+      <inicio>2012</inicio>
+      <termino>2013</termino>
+      <resumo>Tecnologia da informacao</resumo>
+    </trabalho>
+  </experiencia>
+</curriculo>

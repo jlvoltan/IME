@@ -1,0 +1,39 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Luan Ferreira Cardoso</nome>
+      <endereco>
+        <rua>rua Goes Monteiro</rua>
+        <numero>08</numero>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>Rio de Janeiro</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Intermediario</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Mahle Metal Leve Miba Sinterizadso</empresa>
+      <inicio>2005</inicio>
+      <termino>2006</termino>
+      <resumo>Ferramentaria: trabalho com torno mecanico, fresadora e retifica para confeccao de eixos automotivos e matrizes para confeccao de pecas sinterizadas</resumo>
+    </trabalho>
+    <trabalho>
+      <empresa>AIESEC</empresa>
+      <inicio>2014</inicio>
+      <termino>2014</termino>
+      <resumo>Selecao dos candidatos, assinatura do contrato e acompanhamento do intercambista no pais de destino.</resumo>
+    </trabalho>
+  </experiencia>
+</curriculo>

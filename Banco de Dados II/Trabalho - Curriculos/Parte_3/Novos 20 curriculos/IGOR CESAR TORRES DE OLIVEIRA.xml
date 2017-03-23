@@ -1,0 +1,43 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nomeCompleto>Igor Cesar Torres de Oliveira</nomeCompleto>
+      <dataNascimento>15/05/1993</dataNascimento>
+      <email>igorctoliveira@gmail.com</email>
+      <endereco>
+        <estado>RJ</estado>
+        <rua>Estrada do CamuÃ£</rua>
+        <numero>260</numero>
+        <bairro>Maravilha</bairro>
+        <cidade>Paty do Alferes</cidade>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Intermediario</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Sistema Elite de Ensino</empresa>
+      <inicio>2012</inicio>
+      <termino>2014</termino>
+      <resumo>Professor de Matematica e Fisica</resumo>
+    </trabalho>
+    <trabalho>
+      <empresa>Centro Brasileiro de Pesquisas FÃ­sicas</empresa>
+      <inicio>2012</inicio>
+      <termino>2013</termino>
+      <resumo>Computacao na Deteccao de Neutrinos - Projeto para detecÃ§Ã£o de neutrinos externamente na usina de Angra dos Reis (Angra II) a fim de controlar a potÃªncia desempenhada pela usina, jÃ¡ que a potencia Ã© diretamente proporcional ao nÃºmero de neutrinos emitidos.</resumo>
+    </trabalho>
+  </experiencia>
+  <FormacaoComplementar/>
+</curriculo>

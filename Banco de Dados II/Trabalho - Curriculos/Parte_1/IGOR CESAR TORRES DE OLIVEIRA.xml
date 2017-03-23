@@ -33,14 +33,13 @@
             <termino>2014</termino>
             <resumo>Professor de Matematica e Fisica</resumo>
         </trabalho>
+        <trabalho>
+            <empresa>Centro Brasileiro de Pesquisas Físicas</empresa>
+            <inicio>2012</inicio>
+            <termino>2013</termino>
+            <resumo>Computacao na Deteccao de Neutrinos - Projeto para detecção de neutrinos externamente na usina de Angra dos Reis (Angra II) a fim de controlar a potência desempenhada pela usina, já que a potencia é diretamente proporcional ao número de neutrinos emitidos.</resumo>
+        </trabalho>
     </experiencia>
     <FormacaoComplementar>
-        <curso empresa="Centro Brasileiro de Pesquisas Físicas">
-            <descricao>Computacao na Deteccao de Neutrinos</descricao>
-            <periodo>2012-2013</periodo>
-            <situacao>Concluido</situacao>
-            <resumo>Projeto para detecção de neutrinos externamente na usina de Angra dos Reis (Angra II) a fim de controlar a potência desempenhada pela usina, já que a potencia é diretamente proporcional ao número de neutrinos emitidos.</resumo>
-        </curso>
     </FormacaoComplementar>
 </curriculum>
-<!--Grupo: Igor Cesar Torres de Oliveira / Lucas Ferreira Machado / Tiago Oliveira Saldanha -->

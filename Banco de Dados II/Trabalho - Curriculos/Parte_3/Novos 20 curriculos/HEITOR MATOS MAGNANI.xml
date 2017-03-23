@@ -1,0 +1,36 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Heitor Matos Magnani</nome>
+      <Idade>25</Idade>
+      <email>heitor_magnani@hotmail.com</email>
+      <endereco>
+        <rua>General Tiburcio</rua>
+        <numero>80</numero>
+        <cidade>Rio de Janeiro</cidade>
+        <bairro>Urca</bairro>
+        <estado>Rio de Janeiro</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado - TOEFL 110</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Sistema Ph de Ensino</empresa>
+      <inicio>2013</inicio>
+      <termino>2013</termino>
+      <resumo>Auxiliar e ministrar conteudo de fisica, matematica e quimica a alunos da turma pre-militar IME-ITA em horarios flexiveis.</resumo>
+    </trabalho>
+  </experiencia>
+</curriculo>

@@ -1,11 +1,11 @@
 <curriculo>
   <cabecalho>
     <infopessoal>
-      <nome>Pedro Igor de AraÃºjo Oliveira</nome>
+      <nome>Pedro Igor de Araujo Oliveira</nome>
       <dataNascimento>25/11/1994</dataNascimento>
       <email>pedroigorao@hotmail.com</email>
       <endereco>
-        <rua>PraÃ§a General TibÃºrcio</rua>
+        <rua>Praça General Tiburcio</rua>
         <numero>80</numero>
         <bairro>Urca</bairro>
         <cidade>Rio de Janeiro</cidade>
@@ -14,13 +14,13 @@
   </cabecalho>
   <formacao>
     <titulacao>
-      <empresa>ColÃ©gio Bernoulli</empresa>
+      <instituicao>Colegio Bernoulli</instituicao>
       <especialidade/>
       <anodeformatura>2012</anodeformatura>
     </titulacao>
     <titulacao>
-      <empresa>Instituto Militar de Engenharia</empresa>
-      <especialidade>Engenharia de ComputaÃ§Ã£o</especialidade>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Engenharia de Computacao</especialidade>
       <anodeformatura>2018</anodeformatura>
     </titulacao>
   </formacao>

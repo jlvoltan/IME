@@ -1,0 +1,34 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Cristopher Gomes Leal</nome>
+      <Idade>22</Idade>
+      <email>cristopher.gomes.leal@gmail.com</email>
+      <endereco>
+        <rua>Rua bras Cubas</rua>
+        <numero>34</numero>
+        <complemento>quadra 76</complemento>
+        <bairro>Olavo Bilac</bairro>
+        <cidade>Duque de Caxias</cidade>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Engenharia de Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Ingles-Intermediario(Microcamp-4 anos ,conclusao 2012)</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Morning Star Consulting</empresa>
+      <atividade>Desenvolvimento de sistemas na plataforma
+			Microsoft .net</atividade>
+    </trabalho>
+  </experiencia>
+</curriculo>

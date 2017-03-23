@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- GRUPO
-     12016 Matos
-     12032 Mendes
-     12040 Paiva
--->
 <CurriculumVitae>
 	<cabecalho>
 		<Pessoa>
 			<nome>Heitor Matos Magnani</nome>
-			<Email>heitor_magnani@hotmail.com
-		</Email>
 			<Idade>25</Idade>
+			<Email>heitor_magnani@hotmail.com</Email>
 			<Endereco>
 				<Logradouro>General Tiburcio</Logradouro>
 				<Numero>80</Numero>

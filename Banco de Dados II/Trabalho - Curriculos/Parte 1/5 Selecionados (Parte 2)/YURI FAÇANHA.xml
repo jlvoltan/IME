@@ -11,7 +11,7 @@
 				<bairro>Piedade</bairro>
 				<rua>Rua Gonçalves Ledo</rua>
 				<numero>2850</numero>
-				<complemento></complemento>
+				<complemento/>
 			</endereco>
 			<CPF>048.935.583-82</CPF>
 		</infopessoal>
@@ -24,16 +24,18 @@
 		</titulacao>
 		<titulacao tipo="Ensino Medio">
 			<instituicao>Farias Brito</instituicao>
-			<especialidade></especialidade>
+			<especialidade/>
 			<anodeformatura>2013</anodeformatura>
 		</titulacao>
 	</formacao>
 	<listaIdiomas>
-		<idioma nome="Português"> Nativo </idioma>
-		<idioma nome="Inglês"> Básico </idioma>
+		<idioma nome="Português">Nativo </idioma>
+		<idioma nome="Inglês">Básico </idioma>
 	</listaIdiomas>
-	<experiencia></experiencia>
+	<experiencia/>
 	<listaComplementos>
-	<complemento><atividade>Formação e experiência militar (Exército Brasileiro).</atividade></complemento>
+		<complemento>
+			<atividade>Formação e experiência militar (Exército Brasileiro).</atividade>
+		</complemento>
 	</listaComplementos>
 </curriculo>

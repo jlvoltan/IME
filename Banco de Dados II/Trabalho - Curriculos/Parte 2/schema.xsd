@@ -61,18 +61,18 @@
 														<!--
 Com a TAG ALL a sequencia nao importa, vimos que o endereco em especial, cada pessoa colocava em uma sequencia diferente
 -->
-														<xs:element ref="estado"/>
 														<xs:element ref="cidade"/>
 														<xs:element ref="bairro"/>
 														<xs:element ref="rua"/>
 														<xs:element ref="numero"/>
+														<xs:element minOccurs="0" ref="estado"/>
 														<xs:element minOccurs="0" ref="complemento"/>
 														<xs:element minOccurs="0" ref="pais"/>
 														<!-- Tambem usamos esse elemento em instituicao -->
 													</xs:all>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="CPF" type="xs:string"/>
+											<xs:element minOccurs="0" name="CPF" type="xs:string"/>
 											<!--
 Preferimos usar o cpf como string e nao um numero, pois assim nao temos problemas com as pessoas que usam . ou - no campo
 -->

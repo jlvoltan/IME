@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculo>
+    <cabecalho>
+        <infopessoal>
+            <nome>Antonio Luis Sombra de Medeiros</nome>
+            <email>aluis.852@gmail.com</email>
+            <endereco>
+                <rua>Pequeno Menino</rua>
+                <numero>510</numero>
+                <complemento>Apt 90</complemento>
+                <cidade>Salvador</cidade>
+                <bairro>Centro</bairro>
+                <estado/>
+            </endereco>
+            <CPF>Não informado</CPF>
+        </infopessoal>
+    </cabecalho>
+    <formacao>
+        <titulacao tipo="Ensino_Superior">
+            <instituicao>IME</instituicao>
+            <especialidade>Computação</especialidade>
+            <anodeformatura>2015</anodeformatura>
+        </titulacao>
+    </formacao>
+    <proficienciaLinguistica>
+        <Lingua idioma="Inglês">
+            <entende>bem</entende>
+            <fala>bem</fala>
+            <escreve>bem</escreve>
+            <le>bem</le>
+        </Lingua>
+        <Lingua idioma="Frances">
+            <entende>pouco</entende>
+            <fala>pouco</fala>
+            <escreve>pouco</escreve>
+            <le>bem</le>
+        </Lingua>
+    </proficienciaLinguistica>
+    <experiencia>
+        <trabalho cargo="Monitor de Fisica e Matematica para pre-vestibular">
+            <empresa>Curso Pensi - Ipanema</empresa>
+            <inicio>02/2011</inicio>
+            <termino>07/2013</termino>
+        </trabalho>
+    </experiencia>
+</curriculo>

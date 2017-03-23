@@ -1,6 +1,5 @@
-# TrabalhoI
-## Base de Documentos
-### O trabalho deve ser feito em etapas, descritas a seguir:
+# Trabalho I - Base de Documentos
+#### O trabalho deve ser feito em etapas, descritas a seguir:
 
 * 1. Preparar um conjunto de Documentos XML para representar os CVs dos alunos do grupo atual, e de uma turma de alunos já formados da COMP do IME. A base deve ter em torno de 25 CVs, com estruturas variadas. 
 

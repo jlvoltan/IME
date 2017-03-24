@@ -21,7 +21,7 @@
 	<xs:element name="curriculo">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:choice>
+				<xs:choice> <!-- NAO E NECESSARIO-->
 					<!--  dados pessoais 1  -->
 					<xs:element name="cabecalho">
 						<xs:complexType>
@@ -143,7 +143,7 @@ Estamos usando o mesmo elemento que usamos em endereco, referenciado no inicio d
 				<!--  IDIOMAS  -->
 				<xs:choice minOccurs="0">
 					<!--
- Tambem haviam 3 formatos de informacoes referentes a linguas possiveis por isso o choice
+ Tambem havia 3 formatos de informacoes referentes a linguas possiveis por isso o choice
 -->
 					<xs:element name="listaIdiomas">
 						<xs:complexType>

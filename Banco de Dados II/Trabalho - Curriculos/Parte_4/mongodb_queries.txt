@@ -1,0 +1,25 @@
+1)
+->	Projetar o nome e o email das pessoas que moram no Rio de Janeiro.
+
+db.BaseCV.aggregate([{$match:{'curriculo.cabecalho.infopessoal.endereco.cidade':'Rio de Janeiro'}},{$project:{'curriculo.cabecalho.infopessoal.nome':1,'curriculo.cabecalho.infopessoal.email':1,"_id":0}}]).pretty()
+
+
+
+2)
+->	$unwind na formacao , que foi separada em medio e superior(na sua maioria),vai agregar os curriculos por formação, projetando o nome e a formação do individuo
+
+db.BaseCV.aggregate([{$unwind:'$curriculo.formacao.titulacao'},{$project:{'curriculo.cabecalho.infopessoal.nome':1,'curriculo.formacao':1}}]).pretty()
+
+
+
+3)
+->	projetar email e nome de pessoas que possuem hotmail
+
+db.BaseCV.aggregate([{$match:{'curriculo.cabecalho.infopessoal.email': /@hotmail.com$/}},{$project:{'curriculo.cabecalho.infopessoal.nome':1,'curriculo.cabecalho.infopessoal.email':1}}]).pretty()
+
+
+
+4)
+->	projetar nome das pessoas (e sua formação) que trancaram matricula(ano de formatura previsto era 2016 e o dessas pessoas estava em um ano<2016),ordenada pelo nome 
+
+db.BaseCV.aggregate([{$unwind:'$curriculo.formacao.titulacao'},{$match:{$and:[{'curriculo.formacao.titulacao.anoFormatura':{$nin:['2016','2018']}},{'curriculo.formacao.titulacao.anodeformatura':{$nin:['2016','2018']}},{'curriculo.formacao.titulacao.anoformatura':{$nin:['2016','2018']}},{$or:[{'curriculo.formacao.titulacao.instituicao':"Instituto Militar de Engenharia"},{'curriculo.formacao.titulacao.instituicao':"IME"}]}]}},{$project:{"_id":0,'curriculo.cabecalho.infopessoal.nome':1,'curriculo.formacao.titulacao':1}},{$sort:{'curriculo.cabecalho.infopessoal.nome':-1}}]).pretty()

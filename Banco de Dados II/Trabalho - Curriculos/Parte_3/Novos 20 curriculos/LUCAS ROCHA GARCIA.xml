@@ -1,0 +1,51 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Lucas Rocha Garcia</nome>
+      <dataNascimento>11/03/1993</dataNascimento>
+      <email>kartgarcia@gmail.com</email>
+      <endereco>
+        <rua>Rua Marechal Francisco de Moura</rua>
+        <numero>70</numero>
+        <complemento>APTO 201</complemento>
+        <bairro>Botafogo</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado</idioma>
+    <idioma>Avancado</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>IME Junior</empresa>
+      <inicio>15/05/2012</inicio>
+      <termino/>
+      <resumo>Gerente de Projetos</resumo>
+    </trabalho>
+    <trabalho>
+      <empresa>IME Junior</empresa>
+      <inicio>15/02/2014</inicio>
+      <termino/>
+      <resumo>Gerente de Marketing</resumo>
+    </trabalho>
+  </experiencia>
+  <FormacaoComplementar>
+    <curso>
+      <descricao>Iniciacao Cientifica</descricao>
+      <periodo>2013</periodo>
+      <situacao>Concluido</situacao>
+    </curso>
+  </FormacaoComplementar>
+</curriculo>

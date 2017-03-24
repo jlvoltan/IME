@@ -1,0 +1,44 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Robinson Callou de Moura Brasil Filho</nome>
+      <dataNascimento>24/05/1993</dataNascimento>
+      <email>robinson.rcmbf@gmail.com</email>
+      <endereco>
+        <rua>Rua Dona Mariana</rua>
+        <numero>203</numero>
+        <bairro>Botafogo</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado</idioma>
+    <idioma>Avancado</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Centro Cultural Universitario de Botafogo (CCUB)</empresa>
+      <inicio>2013</inicio>
+      <termino>2014</termino>
+    </trabalho>
+  </experiencia>
+  <listaComplementos>
+    <complemento>
+      <resumo>Iniciacao Cientifica no Conselho Nacional de Desenvolvimento Cientifico Tecnologico (CNPq).</resumo>
+    </complemento>
+    <complemento>
+      <resumo>Publicacao: Navegacao Visual: Uma aplicacao para o Kinect (XLV Simposio Brasileiro de Pesquisa Operacional (XLV SBPO))</resumo>
+    </complemento>
+  </listaComplementos>
+</curriculo>

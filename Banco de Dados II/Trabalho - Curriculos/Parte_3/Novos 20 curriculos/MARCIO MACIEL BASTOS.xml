@@ -1,0 +1,29 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Marcio Maciel Bastos</nome>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+    <titulacao>
+      <instituicao>AMAN</instituicao>
+      <especialidade>Graduacao em Engenharia de Combate</especialidade>
+      <anoFormatura>2009</anoFormatura>
+      <sigla>Aman</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <experiencia>
+    <trabalho>
+      <empresa>Exercito</empresa>
+      <resumo>Comandante da equipe de Terraplanagem, Reciclagem e emprego de BGS/BGTC nas Obras de Adequacao e Restauracao no Lote 5 da BR-101</resumo>
+    </trabalho>
+  </experiencia>
+</curriculo>

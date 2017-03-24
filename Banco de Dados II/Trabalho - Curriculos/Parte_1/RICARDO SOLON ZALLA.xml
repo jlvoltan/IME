@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Aluno Ricardo Solon Zalla 	
-	grupo:Leal, Zalla
--->
 <curriculum>
 	<cabecalho>
 		<dados-pessoais>
 			<nome>Ricardo Solon Zalla</nome>
-			<e-mail>zallaricardo@gmail.com</e-mail>
 			<idade>22</idade>
+			<e-mail>zallaricardo@gmail.com</e-mail>
 			<endereco>
 				<logradouro>Avenida Praia de Botafogo</logradouro>
 				<bairro>Botafogo</bairro>
@@ -32,8 +29,8 @@
 		<trabalho tipo="Estagio">
 			<empresa>21212 Digital Accelerator</empresa>
 			<inicio>2013</inicio>
-			<termino>2013</termino>Analise de startups digitais com alto potencial de escalabilidade
-            
-			<resumo/></trabalho>
+			<termino>2013</termino>
+			<resumo>Analise de startups digitais com alto potencial de escalabilidade</resumo>
+		</trabalho>
 	</exp-prof>
-	<info-adicional/>/</curriculum>
+</curriculum>

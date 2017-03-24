@@ -1,0 +1,35 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Ricardo Solon Zalla</nome>
+      <Idade>22</Idade>
+      <email>zallaricardo@gmail.com</email>
+      <endereco>
+        <rua>Avenida Praia de Botafogo</rua>
+        <bairro>Botafogo</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado - Kaplan International College 2 meses</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>21212 Digital Accelerator</empresa>
+      <inicio>2013</inicio>
+      <termino>2013</termino>
+      <resumo>Analise de startups digitais com alto potencial de escalabilidade</resumo>
+    </trabalho>
+  </experiencia>
+</curriculo>

@@ -1,0 +1,59 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Rafael Chaves</nome>
+      <email>rcf.chaves@gmail.com</email>
+      <endereco>
+        <rua>Avenida Prefeito Dulcidio Cardoso</rua>
+        <numero>3230</numero>
+        <bairro>Barra da Tijuca</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Intermediario - Curso na Cultura Inglesa</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Murano Investimentos</empresa>
+      <inicio>2012</inicio>
+      <termino>2013</termino>
+      <resumo>Automatizacao de planilhas de controle de fundo</resumo>
+    </trabalho>
+  </experiencia>
+  <experiencia>
+    <trabalho>
+      <empresa>BBM Investimentos</empresa>
+      <inicio>2014</inicio>
+      <termino>2015</termino>
+      <resumo>Implementacao de um mapeamento dos ativos externos no Banco de Dados. Criacao de um fundo medio da industria de fundos utilizado como benchmark para verificar a pressao de fluxo em cada fator.</resumo>
+    </trabalho>
+  </experiencia>
+  <experiencia>
+    <trabalho>
+      <empresa>AIESEC RJ</empresa>
+      <inicio>2004</inicio>
+      <termino>2009</termino>
+      <resumo>Coordenar projetos de venda de intercambio social para faculdades com foco na gestao.</resumo>
+    </trabalho>
+  </experiencia>
+  <FormacaoComplementar>
+    <curso>
+      <descricao>Eletronica embarcada para um sistema de multiplos robos autonomos</descricao>
+      <periodo>2013</periodo>
+      <sigla>ROBOIME</sigla>
+      <resumo>Aprimoramento da inteligencia e firmware do time de futebol de robos do IME com finalidade de participar das competicoes internacionais RoboCup e LARC (Latin America) na categoria Small Size League.</resumo>
+    </curso>
+  </FormacaoComplementar>
+</curriculo>

@@ -1,0 +1,49 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nomeCompleto>Venicius Goncalves da Rocha Junior</nomeCompleto>
+      <email>veniciusgrjr@gmail.com</email>
+      <endereco>
+        <rua>Praca general tiburcio</rua>
+        <numero>80</numero>
+        <cidade>Rio de Janeiro</cidade>
+        <bairro>Urca</bairro>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+    <titulacao>
+      <instituicao>Fundacao Getulio Vargas</instituicao>
+      <especialidade>Mestrado em Modelagem Matematica</especialidade>
+      <sigla>FGV</sigla>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado</idioma>
+    <idioma>Basico</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Sistema Elite de Ensino</empresa>
+      <inicio/>
+      <termino/>
+      <resumo>Aulas de matematica e fisica para ensino medio e turmas ime-ita</resumo>
+    </trabalho>
+  </experiencia>
+  <listaComplementos>
+    <complemento>
+      <resumo>Iniciação científica com microcontrolador STM32F407vg para aplicação no desenvolvimento de Casa Inteligente (IME-CNPQ, conclusão em 2013).</resumo>
+    </complemento>
+    <complemento>
+      <resumo>Iniciação científica desenvolvimento de aplicativos em java para medida de antenas, análise de circuitos e controle de uma máquina Router (IME-CNPQ, de 05/12 a 08/14 ).</resumo>
+    </complemento>
+  </listaComplementos>
+</curriculo>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<curriculo>
+	<cabecalho>
+		<infopessoal>
+			<nome>Tiago Oliveira Saldanha</nome>
+			<dataNascimento>29/09/1992</dataNascimento>
+			<email>saldanhatiago@hotmail.com</email>
+			<endereco>
+				<estado>RJ</estado>
+				<cidade>Rio de Janeiro</cidade>
+				<bairro>Urca</bairro>
+				<rua>Praça General Tiburcio</rua>
+				<numero>80</numero>
+			</endereco>
+		</infopessoal>
+	</cabecalho>
+
+	<formacao>
+		<titulacao tipo="Ensino Medio">
+			<instituicao>Colegio Marista de Brasilia</instituicao>
+			<anodeformatura>2010</anodeformatura>
+		</titulacao>
+
+		<titulacao tipo="Ensino Superior">
+                <instituicao>Instituto Militar de Engenharia</instituicao>
+                <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+                <anoFormatura>2016</anoFormatura>
+                <sigla>IME</sigla>
+                <situacao>concluido</situacao>
+        </titulacao>
+	</formacao>
+
+	<listaIdiomas>
+			<idioma nome="Ingles">Fluente</idioma>
+			<idioma nome="Alemao">Basico</idioma>
+	</listaIdiomas>
+	<experiencia></experiencia>
+
+	<listaComplementos>
+		<complemento><atividade>Mencao honrosa OBF 2010.</atividade></complemento>
+		<complemento><atividade>Medalha de bronze OBA 2010.</atividade></complemento>
+	</listaComplementos>
+</curriculo>

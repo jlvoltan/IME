@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Grupo: Mendes, Paiva e Matos -->
 <CurriculumVitae>
 	<root>
 		<Pessoa>
-			<nome>Lucas Mendes Santos Silva
-		</nome>
-			<Email>lucasmends@yahoo.com.br
-		</Email>
-			<Idade>21
-		</Idade>
+			<nome>Lucas Mendes Santos Silva</nome>
+			<Idade>21</Idade>
+			<Email>lucasmends@yahoo.com.br</Email>
 			<Endereco>
-				<Logradouro>Rua da Bondade
-			</Logradouro>
-				<Numero>275
-			</Numero>
-				<Bairro>Curicica
-			</Bairro>
-				<Cidade>Rio de Janeiro
-			</Cidade>
-				<Estado>Rio de Janeiro
-				</Estado>
+				<Logradouro>Rua da Bondade</Logradouro>
+				<Numero>275</Numero>
+				<Bairro>Curicica</Bairro>
+				<Cidade>Rio de Janeiro</Cidade>
+				<Estado>Rio de Janeiro</Estado>
 			</Endereco>
 		</Pessoa>
 	</root>

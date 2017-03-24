@@ -1,0 +1,36 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Lucas Mendes Santos Silva</nome>
+      <Idade>21</Idade>
+      <email>lucasmends@yahoo.com.br</email>
+      <endereco>
+        <rua>Rua da Bondade</rua>
+        <numero>275</numero>
+        <bairro>Curicica</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>Rio de Janeiro</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado - TOEFL 99</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Supplt Midia</empresa>
+      <inicio>2013</inicio>
+      <termino>2013</termino>
+      <resumo>Participacao na transferencia de um software off-line de gestao e controle de pagamentos e custos para pequenas e medias empresas para um ambiente online utilizando a linguagem Java e banco de dados Firebird (Banco SQL). Responsavel pela parte de pagamentos.</resumo>
+    </trabalho>
+  </experiencia>
+</curriculo>

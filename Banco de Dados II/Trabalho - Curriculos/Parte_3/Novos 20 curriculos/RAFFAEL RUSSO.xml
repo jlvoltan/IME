@@ -1,0 +1,44 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Raffael  Russo</nome>
+      <email>raffaelrusso@gmail.com</email>
+      <endereco>
+        <rua>Rua Paula Freitas</rua>
+        <numero>95</numero>
+        <bairro>Copacabana</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado</idioma>
+    <idioma>Intermediario</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>BBM Investimentos</empresa>
+      <inicio>2014</inicio>
+      <termino>2015</termino>
+      <resumo>Geração de relatórios para o Banco central.
+						Utilizaçao de VBA para automatização de rotinas.
+						Envio de um consolidado das operações feitas pelo Banco no setor de cessão de crédito.
+						Mapeamento da carteira de credito do banco.</resumo>
+    </trabalho>
+  </experiencia>
+  <listaComplementos>
+    <complemento>
+      <resumo>Projeto de desenvolvimento de Software de acoplar uma câmera a uma arma para que o usuário pudesse ter uma visão ampliada do campo de batalha e pudesse detectar e reonhecer faces.</resumo>
+    </complemento>
+  </listaComplementos>
+</curriculo>

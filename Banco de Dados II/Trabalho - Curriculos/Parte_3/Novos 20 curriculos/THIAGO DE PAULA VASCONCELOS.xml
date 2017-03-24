@@ -1,0 +1,49 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Thiago de Paula Vasconcelos</nome>
+      <dataNascimento>15/02/1992</dataNascimento>
+      <email>thiagodpvasconcelos@hotmail.com</email>
+      <endereco>
+        <rua>Rua Marechal Francisco de Moura</rua>
+        <numero>70</numero>
+        <complemento>apt 201</complemento>
+        <bairro>Botafogo</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>RJ</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+    </titulacao>
+    <titulacao>
+      <instituicao>University of Illinois at Urbana-Champaign - USA</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado</idioma>
+    <idioma>Intermediario</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Descomplica</empresa>
+      <inicio>2015</inicio>
+      <termino/>
+      <resumo/>
+    </trabalho>
+  </experiencia>
+  <listaComplementos>
+    <complemento>
+      <resumo>Iniciação cientifica.</resumo>
+    </complemento>
+    <complemento>
+      <resumo>Publicacao sobre a Conectividade Algebrica de tipo II na Subclasse das Arvores (XLV Simposio Brasileiro de Pesquisa Operacional (XLV SBPO)).</resumo>
+    </complemento>
+  </listaComplementos>
+</curriculo>

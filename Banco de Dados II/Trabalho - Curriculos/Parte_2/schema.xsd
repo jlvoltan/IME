@@ -56,15 +56,15 @@
 												</xs:simpleType>
 											</xs:element>
 											<xs:element minOccurs="0" name="email" type="xs:string"/>
-											<xs:element name="endereco">
+											<xs:element minOccurs="0" name="endereco">
 												<xs:complexType>
 													<xs:all>
 														<!--
 Com a TAG ALL a sequencia nao importa, vimos que o endereco em especial, cada pessoa colocava em uma sequencia diferente
 -->
-														<xs:element ref="cidade"/>
 														<xs:element ref="rua"/>
-														<xs:element ref="numero"/>
+														<xs:element minOccurs="0" ref="cidade"/>
+														<xs:element minOccurs="0" ref="numero"/>
 														<xs:element minOccurs="0" ref="bairro"/>
 														<xs:element minOccurs="0" ref="apto"/>
 														<xs:element minOccurs="0" ref="estado"/>
@@ -96,10 +96,10 @@ Preferimos usar o cpf como string e nao um numero, pois assim nao temos problema
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="instituicao" type="xs:string"/>
-										<xs:element name="especialidade" type="xs:string"/>
-										<xs:choice>
+										<xs:element minOccurs="0" name="especialidade" type="xs:string"/>
+										<xs:choice minOccurs="0">
 											<!--
-Haviam muitas variacoes nesse campo, por isso o choice
+Havia muitas variacoes nesse campo, por isso o choice
 -->
 											<xs:element ref="anodeformatura"/>
 											<xs:element ref="anoformatura"/>
@@ -168,7 +168,7 @@ Estamos usando o mesmo elemento que usamos em endereco, referenciado no inicio d
 						</xs:complexType>
 					</xs:element>
 					<!--  OU ENTO  -->
-					<xs:element name="proficiencia_linguistica">
+					<xs:element name="proficiencia_linguistica" maxOccurs="unbounded">
 						<xs:complexType>
 							<xs:sequence>
 								<xs:element maxOccurs="unbounded" minOccurs="0" name="idioma">
@@ -235,9 +235,9 @@ Estamos usando o mesmo elemento que usamos em endereco, referenciado no inicio d
 									<xs:complexType>
 										<xs:all>
 											<!--  Usamos o ALL pois a ordem variava muito -->
-											<xs:element name="descricao" type="xs:string"/>
-											<xs:element name="periodo" type="xs:short"/>
-											<xs:element name="local" type="xs:string"/>
+											<xs:element minOccurs="0" name="descricao" type="xs:string"/>
+											<xs:element minOccurs="0" name="periodo" type="xs:string"/>
+											<xs:element minOccurs="0" name="local" type="xs:string"/>
 											<xs:element minOccurs="0" name="sigla" type="xs:string"/>
 											<xs:element minOccurs="0" ref="pais"/>
 											<!--
@@ -291,6 +291,7 @@ Novamente estamos usando o mesmo elemento cidado no inicio do esuema, e ja usado
 										<xs:element minOccurs="0" name="atividade" type="xs:string"/>
 										<xs:element minOccurs="0" name="inicio" type="xs:string"/>
 										<xs:element minOccurs="0" name="termino" type="xs:string"/>
+										<xs:element minOccurs="0" name="resumo" type="xs:string"/>
 									</xs:sequence>
 									<xs:attribute name="tipo" type="xs:string" use="optional"/>
 								</xs:complexType>

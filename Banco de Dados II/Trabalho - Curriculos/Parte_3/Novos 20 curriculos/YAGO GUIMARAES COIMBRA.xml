@@ -1,0 +1,51 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Yago Guimarães Coimbra</nome>
+      <email>yguimaraescoimbra@gmail.com</email>
+      <endereco>
+        <rua>Rua Maria Lopes</rua>
+        <numero>269</numero>
+        <complemento>102</complemento>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2015</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado - TOEFL 99</idioma>
+  </proficiencia_linguistica>
+  <experiencia>
+    <trabalho>
+      <empresa>Morning Star Consulting</empresa>
+      <inicio>2013</inicio>
+      <termino>2014</termino>
+      <resumo>Desenvolvi um portal web utilizando ASP.NET MVC 3, onde foi implementada uma funcionalidade de mapas utilizando bibliotecas open source como SharpMap e Openlayers.Desenvolvi planilhas automatizadas para realizar o cálculo de indicadores utilizando a ferramenta VBA do Excel.</resumo>
+    </trabalho>
+    <trabalho>
+      <empresa>GetNinjas</empresa>
+      <inicio>2013</inicio>
+      <termino>2013</termino>
+      <resumo>Criei e gerenciei mais de 80 campanhas do Google AdWords, identificando e implementando novas iniciativas para a expansão do marketing online.Desenvolvi planilhas e macros para otimizar a análise das palavras chaves, usando a ferramenta VBA do Excel.Organizei processo seletivo para a contratação de estagiários no setor de business inteligence.</resumo>
+    </trabalho>
+    <trabalho>
+      <empresa>Colegio e Curso Ponto de Ensino</empresa>
+      <inicio>2011</inicio>
+      <termino>2012</termino>
+      <resumo>Retirei duvidas e substitui professores nas disciplinas de Fisica e Matematica para alunos do ensino medio e de cursos pre-vestibular e pre-militar.</resumo>
+    </trabalho>
+  </experiencia>
+  <FormacaoComplementar>
+    <curso>
+      <descricao>VBA aplicado a negocios</descricao>
+      <periodo>20h</periodo>
+    </curso>
+  </FormacaoComplementar>
+</curriculo>

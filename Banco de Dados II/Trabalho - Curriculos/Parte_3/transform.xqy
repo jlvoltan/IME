@@ -1,13 +1,22 @@
-declare function local:specials($nodes as node()*) as node()*
+declare function local:special_trabalho($nodes as node()*) as node()*
 {
 	for $n in $nodes return
 		typeswitch ($n)
 			case text() return $n
 			case element (instituicao) return <empresa>{local:transform($n/node())}</empresa>
-			case element() return element {name($n)} {local:transform($n/node())}
+			case element() return local:transform($n)
 			default return local:transform($n/node())
 };
 
+declare function local:special_FormacaoComplementar($nodes as node()*) as node()*
+{
+	for $n in $nodes return
+		typeswitch ($n)
+			case text() return $n
+			case element (curso) return <curso>{local:transform($n/node())}</curso>
+			case element() return local:transform($n)
+			default return local:transform($n/node())
+};
 
 declare function local:transform($nodes as node()*) as node()*
 {
@@ -23,7 +32,7 @@ declare function local:transform($nodes as node()*) as node()*
 			case element (exp-prof) return <experiencia>{local:transform($n/node())}</experiencia>
 			case element (atividade) return <resumo>{local:transform($n/node())}</resumo>
 			case element (qualificacao) return <proficiencia_linguistica>{local:transform($n/node())}</proficiencia_linguistica>
-			case element (info-adicional) return <FormacaoComplementar>{local:transform($n/node())}</FormacaoComplementar>
+			case element (info-adicional) return <FormacaoComplementar>{local:special_FormacaoComplementar($n/node())}</FormacaoComplementar>
 			case element (dados_pessoais) return <infopessoal>{local:transform($n/node())}</infopessoal>
 			case element (formacao_academica) return <formacao>{local:transform($n/node())}</formacao>
 			case element (experiencia_profissional) return <experiencia>{local:transform($n/node())}</experiencia>
@@ -33,7 +42,7 @@ declare function local:transform($nodes as node()*) as node()*
 			case element (info) return <infopessoal>{local:transform($n/node())}</infopessoal>
 			case element (prof_linguistic) return <proficiencia_linguistica>{local:transform($n/node())}</proficiencia_linguistica>
 			case element (WorkExperience) return <experiencia>{local:transform($n/node())}</experiencia>
-			case element (ComplementaryActivities) return <FormacaoComplementar>{local:transform($n/node())}</FormacaoComplementar>
+			case element (ComplementaryActivities) return <FormacaoComplementar>{local:special_FormacaoComplementar($n/node())}</FormacaoComplementar>
 			case element (Pessoa) return <infopessoal>{local:transform($n/node())}</infopessoal>
 			case element (logradouro) return <rua>{local:transform($n/node())}</rua>
 			case element (address) return <endereco>{local:transform($n/node())}</endereco>
@@ -53,7 +62,7 @@ declare function local:transform($nodes as node()*) as node()*
 			case element (root) return <cabecalho>{local:transform($n/node())}</cabecalho>
 			case element (informacaopessoal) return <infopessoal>{local:transform($n/node())}</infopessoal>
 			case element (quando) return <periodo>{local:transform($n/node())}</periodo>
-			case element (FormacaoExtra) return <FormacaoComplementar>{local:transform($n/node())}</FormacaoComplementar>
+			case element (FormacaoExtra) return <FormacaoComplementar>{local:special_FormacaoComplementar($n/node())}</FormacaoComplementar>
 			case element (Logradouro) return <rua>{local:transform($n/node())}</rua>
 			case element (Numero) return <numero>{local:transform($n/node())}</numero>
 			case element (Rua) return <rua>{local:transform($n/node())}</rua>
@@ -92,16 +101,18 @@ declare function local:transform($nodes as node()*) as node()*
 			case element (e-mail) return <email>{local:transform($n/node())}</email>
 			case element (education) return <formacao>{local:transform($n/node())}</formacao>
 			case element (Formacao) return <formacao>{local:transform($n/node())}</formacao>
+			case element (number) return <numero>{local:transform($n/node())}</numero>
+			case element (curso-especialidade) return <especialidade>{local:transform($n/node())}</especialidade>
 
 
 			case element (qualificacao-item) return <idioma>{concat(string($n/@nome), '-', $n/node())}</idioma>
 
-			case element (trabalho) return element {name($n)} {local:specials($n/node())}
+			case element (trabalho) return element {name($n)} {local:special_trabalho($n/node())}
 
-
+			case element (FormacaoComplementar) return element {name($n)} {local:special_FormacaoComplementar($n/node())}
 
 			case element() return element {name($n)} {local:transform($n/node())}
 			default return local:transform($n/node())
 };
 
-let $x := doc("CRISTOPHER GOMES LEAL.xml") return local:transform($x)
+let $x := doc("RICARDO SOLON ZALLA.xml") return local:transform($x)

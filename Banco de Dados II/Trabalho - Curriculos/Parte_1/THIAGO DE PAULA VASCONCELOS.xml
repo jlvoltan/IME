@@ -1,14 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!--Lucas Rocha Garcia (12420)
-Rafael Farias Cação (12430)
-Robinson Callou de Moura Brasil Filho (12435)
-Thiago de Paula Vasconcelos (11442)-->
 <CV>
   <Body>
     <info>
       <Name>Thiago de Paula Vasconcelos</Name>
-      <Email>thiagodpvasconcelos@hotmail.com</Email>
       <Nascimento>15/02/1992</Nascimento>
+      <Email>thiagodpvasconcelos@hotmail.com</Email>
       <Endereco>
         <Logradouro>Rua Marechal Francisco de Moura</Logradouro>
         <Numero>70</Numero>
@@ -25,12 +21,10 @@ Thiago de Paula Vasconcelos (11442)-->
       <especialidade>Graduacao em Engenharia da Computacao</especialidade>
       <anoFormatura>2016</anoFormatura>
       <sigla>IME</sigla>
-      <situacao>concluido</situacao>
     </titulacao>
     <titulacao tipo="Intercambio">
       <instituicao>University of Illinois at Urbana-Champaign - USA</instituicao>
       <especialidade>Graduacao em Engenharia da Computacao</especialidade>
-      <situacao>concluido</situacao>
     </titulacao>
   </Formacao>
   <linguas>

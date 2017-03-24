@@ -1,0 +1,32 @@
+<curriculo>
+  <cabecalho>
+    <infopessoal>
+      <nome>Rafael de Paula Paiva</nome>
+      <Idade>23</Idade>
+      <email>08.paiva@gmail.com</email>
+      <endereco>
+        <rua>General Tibúrcio</rua>
+        <numero>80</numero>
+        <bairro>Urca</bairro>
+        <cidade>Rio de Janeiro</cidade>
+        <estado>Rio de Janeiro</estado>
+      </endereco>
+    </infopessoal>
+  </cabecalho>
+  <formacao>
+    <titulacao>
+      <instituicao>Instituto Militar de Engenharia</instituicao>
+      <especialidade>Graduacao em Engenharia da Computacao</especialidade>
+      <anoFormatura>2016</anoFormatura>
+      <sigla>IME</sigla>
+      <situacao>concluido</situacao>
+    </titulacao>
+  </formacao>
+  <proficiencia_linguistica>
+    <idioma>Avancado - TOEFL 92</idioma>
+  </proficiencia_linguistica>
+  <proficiencia_linguistica>
+    <idioma>Principiante</idioma>
+  </proficiencia_linguistica>
+  <experiencia/>
+</curriculo>

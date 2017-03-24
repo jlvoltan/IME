@@ -1,0 +1,8 @@
+{
+  "name": "Trabalho-BD",
+  "dependencies": {
+    "xml2json": "*",
+	"prompt": "*",
+	"util": "*"
+  }
+}

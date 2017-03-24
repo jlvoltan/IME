@@ -1,0 +1,53 @@
+{
+    "curriculo": {
+        "cabecalho": {
+            "infopessoal": {
+                "CPF": "Não informado",
+                "email": "aluis.852@gmail.com",
+                "endereco": {
+                    "bairro": "Centro",
+                    "cidade": "Salvador",
+                    "complemento": "Apt 90",
+                    "estado": {},
+                    "numero": "510",
+                    "rua": "Pequeno Menino"
+                },
+                "nome": "Antonio Luis Sombra de Medeiros"
+            }
+        },
+        "experiencia": {
+            "trabalho": {
+                "cargo": "Monitor de Fisica e Matematica para pre-vestibular",
+                "empresa": "Curso Pensi - Ipanema",
+                "inicio": "02/2011",
+                "termino": "07/2013"
+            }
+        },
+        "formacao": {
+            "titulacao": {
+                "anodeformatura": "2015",
+                "especialidade": "Computação",
+                "instituicao": "IME",
+                "tipo": "Ensino_Superior"
+            }
+        },
+        "proficienciaLinguistica": {
+            "Lingua": [
+                {
+                    "entende": "bem",
+                    "escreve": "bem",
+                    "fala": "bem",
+                    "idioma": "Inglês",
+                    "le": "bem"
+                },
+                {
+                    "entende": "pouco",
+                    "escreve": "pouco",
+                    "fala": "pouco",
+                    "idioma": "Frances",
+                    "le": "bem"
+                }
+            ]
+        }
+    }
+}

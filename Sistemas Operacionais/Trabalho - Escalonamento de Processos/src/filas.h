@@ -8,8 +8,10 @@ const int INF = 0x3f3f3f3f;
 
 class Fila{
 protected:
+	vector<Processo> * mapId;
 	queue<int> qPId;
 public:
+	Fila(vector<Processo> * mapId = NULL) : mapId(mapId){}
 	virtual void inserir(int pId, int tempo) = 0;
 };
 
@@ -22,9 +24,8 @@ private:
 	int quantum;
 	int inicio;
 	bool ativo;
-	map<int, Processo> * mapId;
 public:
-	Q0(map<int, Processo> * mapId = NULL, int quantum = 10) : mapId(mapId), quantum(quantum){
+	Q0(vector<Processo> * mapId = NULL, int quantum = 10) : Fila(mapId), quantum(quantum){
 		ativo = false;
 	}
 	bool ativar(int tempo){
@@ -56,11 +57,10 @@ public:
 
 class IO : public Fila{
 private:
-	map<int, Processo> * mapId;
 	int tInicio;
 	int tIO;
 public:
-	IO(map<int, Processo> * mapId = NULL, int tIO = 20) : mapId(mapId), tIO(tIO){
+	IO(vector<Processo> * mapId = NULL, int tIO = 20) : Fila(mapId), tIO(tIO){
 		tInicio = INF;
 	}
 	void inserir(int pId, int tempo){
@@ -93,12 +93,11 @@ public:
 
 class Q1 : public Fila{
 private:
-	map<int, Processo> * mapId;
 	int tPromocao;
 	int executando, tInicioExecucao;
 	queue<int> qTChegada;
 public:
-	Q1(map<int, Processo> * mapId = NULL, int tPromocao = 40) : mapId(mapId), tPromocao(tPromocao){
+	Q1(vector<Processo> * mapId = NULL, int tPromocao = 40) : Fila(mapId), tPromocao(tPromocao){
 		executando = 0;
 	}
 	void inserir(int pId, int tempo){

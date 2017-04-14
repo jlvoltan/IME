@@ -1,8 +1,10 @@
-Insira o numero de processos:
+Insira o numero de processos em Q0:
 Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 1: 
 Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 2: 
 Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 3: 
 Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 4: 
+
+Insira o numero de processos em Q1:
 Processo: 1, Inicio: 0 ms, Fim: 10 ms
 Processo: 2, Inicio: 10 ms, Fim: 20 ms
 Processo: 3, Inicio: 20 ms, Fim: 30 ms

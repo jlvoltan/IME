@@ -5,26 +5,34 @@ using namespace std;
 
 class Gerenciador{
 private:
-	map<int, Processo> mapId;
+	vector<Processo> mapId;
 	Q0 q0;
 	Q1 q1;
 	IO io;
 	Gantt gantt;
 	int tempo, n;
 public:
-	Gerenciador(){
+	Gerenciador(int nProcessos = 1000){
 		q0 = Q0(&mapId);
 		q1 = Q1(&mapId);
 		io = IO(&mapId);
 		tempo = n = 0;
+		mapId.resize(nProcessos);
 	}
-	void inserir(int tCPU, int nIO){
+	void inserirQ0(int tCPU, int nIO){
 		n++;
-		mapId[n] = Processo(tCPU, nIO, n);
+		mapId[n] = Processo(tCPU, nIO);
 		q0.inserir(n, tempo);
+	}
+	void inserirQ1(int tCPU, int nIO){
+		n++;
+		mapId[n] = Processo(tCPU, nIO);
+		q1.inserir(n, tempo);
 	}
 	void simular(){
 		bool preempcao;
+		if(!q0.ativar(tempo))
+			q1.ativar(tempo);
 		while(n){
 			vector<int> tempos;
 			tempos.push_back(q0.tProximoEvento(preempcao));

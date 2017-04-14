@@ -1,0 +1,47 @@
+Insira o numero de processos:
+Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 1: 
+Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 2: 
+Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 3: 
+Processo: 1, Inicio: 0 ms, Fim: 10 ms
+Processo: 2, Inicio: 10 ms, Fim: 20 ms
+Processo: 3, Inicio: 20 ms, Fim: 30 ms
+Processo: 1, Inicio: 30 ms, Fim: 50 ms
+Processo: 1, Inicio: 50 ms, Fim: 60 ms
+Processo: 2, Inicio: 60 ms, Fim: 70 ms
+Processo: 3, Inicio: 70 ms, Fim: 80 ms
+Processo: 1, Inicio: 80 ms, Fim: 100 ms
+Processo: 1, Inicio: 100 ms, Fim: 110 ms
+Processo: 2, Inicio: 110 ms, Fim: 120 ms
+Processo: 3, Inicio: 120 ms, Fim: 130 ms
+Processo: 1, Inicio: 130 ms, Fim: 150 ms
+Processo: 1, Inicio: 150 ms, Fim: 160 ms
+Processo: 2, Inicio: 160 ms, Fim: 170 ms
+Processo: 3, Inicio: 170 ms, Fim: 180 ms
+Processo: 1, Inicio: 180 ms, Fim: 200 ms
+Processo: 1, Inicio: 200 ms, Fim: 210 ms
+Processo: 2, Inicio: 210 ms, Fim: 220 ms
+Processo: 3, Inicio: 220 ms, Fim: 230 ms
+Processo: 1, Inicio: 230 ms, Fim: 250 ms
+Processo: 1, Inicio: 250 ms, Fim: 260 ms
+Processo: 2, Inicio: 260 ms, Fim: 270 ms
+Processo: 3, Inicio: 270 ms, Fim: 280 ms
+Processo: 1, Inicio: 280 ms, Fim: 300 ms
+Processo: 1, Inicio: 300 ms, Fim: 310 ms
+Processo: 2, Inicio: 310 ms, Fim: 320 ms
+Processo: 3, Inicio: 320 ms, Fim: 330 ms
+Processo: 1, Inicio: 330 ms, Fim: 340 ms
+Processo: 2, Inicio: 340 ms, Fim: 360 ms
+Processo: 2, Inicio: 360 ms, Fim: 370 ms
+Processo: 3, Inicio: 370 ms, Fim: 380 ms
+Processo: 2, Inicio: 380 ms, Fim: 410 ms
+Processo: 2, Inicio: 410 ms, Fim: 420 ms
+Processo: 3, Inicio: 420 ms, Fim: 430 ms
+Processo: 2, Inicio: 430 ms, Fim: 460 ms
+Processo: 2, Inicio: 460 ms, Fim: 470 ms
+Processo: 3, Inicio: 470 ms, Fim: 480 ms
+Processo: 2, Inicio: 480 ms, Fim: 500 ms
+Processo: 3, Inicio: 500 ms, Fim: 520 ms
+Processo: 3, Inicio: 520 ms, Fim: 530 ms
+Processo: 3, Inicio: 530 ms, Fim: 570 ms
+Processo: 3, Inicio: 570 ms, Fim: 580 ms
+Processo: 3, Inicio: 580 ms, Fim: 600 ms

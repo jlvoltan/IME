@@ -115,4 +115,4 @@ declare function local:transform($nodes as node()*) as node()*
 			default return local:transform($n/node())
 };
 
-let $x := doc("RICARDO SOLON ZALLA.xml") return local:transform($x)
+let $x := doc("RICARDO_SOLON_ZALLA.xml") return local:transform($x)

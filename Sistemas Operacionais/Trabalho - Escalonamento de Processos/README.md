@@ -1,4 +1,4 @@
-#####• Descrição: Fazer um programa que simule o algoritmo de escalonamento de múltiplas filas (com realimentação) com as seguintes características:
+#####Descrição: Fazer um programa que simule o algoritmo de escalonamento de múltiplas filas (com realimentação) com as seguintes características:
 
 – São utilizadas 2 filas de processos prontos (Q0 e Q1).
 
@@ -15,7 +15,7 @@
 – Um processo passa da fila Q1 para a fila Q0 quando este processo fica pelo menos 40mseg na fila Q1.
 
 
-#####• Além disso, considere que:
+#####Além disso, considere que:
 
 – Todos os surtos de CPU de um mesmo processo têm a mesma duração (dada como entrada);
 
@@ -23,7 +23,7 @@
 
 – Qualquer operação de E/S leva 20mseg para ser executada pelo dispositivo.
 
-#####• O programa receberá como entrada a configuração das filas no instante 0:
+#####O programa receberá como entrada a configuração das filas no instante 0:
 
 – Total de processos de cada fila;
 
@@ -31,4 +31,4 @@
 
 – O número de operações de E/S de cada processo.
 
-#####• O programa deve gerar como saída uma descrição do diagrama de Gantt resultante.
+#####O programa deve gerar como saída uma descrição do diagrama de Gantt resultante.

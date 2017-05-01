@@ -49,7 +49,7 @@ public:
 			}
 			if(tempo == io.tProximoEvento()){
 				if(io.finalizar(tempo, q0))
-					q1.parar(tempo, gantt);
+					q1.parar(tempo, gantt, true);
 			}
 			if(tempo == q0.tProximoEvento(preempcao)){
 				q0.finalizar(tempo, gantt, q1, io, n);

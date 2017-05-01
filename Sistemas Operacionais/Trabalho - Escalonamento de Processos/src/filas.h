@@ -118,10 +118,12 @@ public:
 		else
 			return INF;
 	}
-	void parar(int tempo, Gantt & gantt){
+	void parar(int tempo, Gantt & gantt, bool preempcao){
 		if(executando){
 
 			gantt.inserir(executando, tInicioExecucao, tempo);
+			if(preempcao)
+				inserir(executando, tempo);
 
 			(*mapId)[executando].tExecutando += tempo - tInicioExecucao;
 			executando = 0;
@@ -131,11 +133,13 @@ public:
 		if(!executando and !qPId.empty()){
 			tInicioExecucao = tempo;
 			executando = qPId.front();
+			qPId.pop();
+			qTChegada.pop();
 		}
 	}
 	void promover(int tempo, Gantt & gantt, Q0 & q0){
 		int pId = qPId.front();
-		parar(tempo, gantt);
+		parar(tempo, gantt, true);
 		//repassando para Q0
 		q0.inserir(pId, tempo);
 		qPId.pop();
@@ -144,7 +148,7 @@ public:
 	}
 	void finalizar(int tempo, Gantt & gantt, IO & io, int & n){
 		int pId = executando;
-		parar(tempo, gantt);
+		parar(tempo, gantt, false);
 		(*mapId)[pId].tExecutando = 0;
 		if((*mapId)[pId].nIO){
 			//repassando para IO
@@ -152,8 +156,6 @@ public:
 		}
 		else
 			n--;
-		qPId.pop();
-		qTChegada.pop();
 		ativar(tempo);
 	}
 };

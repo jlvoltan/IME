@@ -102,7 +102,6 @@ public:
 		executando = 0;
 	}
 	void inserir(int pId, int tempo){
-		// qPId.push(pId);
 		dq.push_back(pId);
 		qTChegada.push(make_pair(tempo, pId));
 	}
@@ -136,9 +135,7 @@ public:
 	void ativar(int tempo){
 		if(!executando and !qTChegada.empty()){
 			tInicioExecucao = tempo;
-			// executando = qPId.front();
 			executando = dq.front();
-			// qPId.pop();
 			dq.pop_front();
 			queue<pair<int,int> > temp;
 			while(qTChegada.empty() == false){
@@ -158,7 +155,6 @@ public:
 		//repassando para Q0
 		q0.inserir(pId, tempo);
 
-		// qPId.pop();
 		deque<int> temp;
 		while(dq.empty() == false){
 			if(dq.front() != pId)

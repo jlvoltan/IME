@@ -6,7 +6,7 @@
 – A fila Q1 usa o escalonamento FCFS.
 – O escalonamento entre as filas é por prioridade com preempção. Q0 é a fila com maior prioridade e Q1 tem prioridade baixa.
 – Um processo passa da fila Q0 para a fila Q1 quando sofre preempção por tempo.
-– Um processo passa da fila Q1 para a fila Q0 quando este processo fica pelo menos 40mseg na fila Q1.
+– Um processo passa da fila Q1 para a fila Q0 quando este processo fica pelo menos 30mseg na fila Q1.
 
 #### • Além disso, considere que:
 

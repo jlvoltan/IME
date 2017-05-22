@@ -4,13 +4,14 @@ Insira o numero de processos em Q1:
 Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 1: 
 Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 2: 
 Insira a duracao do surto de CPU e o numero de operacoes de E/S do processo 3: 
-Processo: 1, Inicio: 0 ms, Fim: 39 ms
-Processo: 2, Inicio: 39 ms, Fim: 40 ms
+Processo: 1, Inicio: 0 ms, Fim: 30 ms
+Processo: 2, Inicio: 30 ms, Fim: 40 ms
 Processo: 3, Inicio: 40 ms, Fim: 50 ms
-Processo: 2, Inicio: 50 ms, Fim: 59 ms
-Processo: 1, Inicio: 59 ms, Fim: 69 ms
-Processo: 1, Inicio: 69 ms, Fim: 79 ms
-Processo: 3, Inicio: 79 ms, Fim: 89 ms
-Processo: 1, Inicio: 89 ms, Fim: 99 ms
-Processo: 2, Inicio: 99 ms, Fim: 109 ms
-Processo: 1, Inicio: 109 ms, Fim: 118 ms
+Processo: 1, Inicio: 50 ms, Fim: 59 ms
+Processo: 0, Inicio: 59 ms, Fim: 60 ms
+Processo: 2, Inicio: 60 ms, Fim: 70 ms
+Processo: 0, Inicio: 70 ms, Fim: 80 ms
+Processo: 3, Inicio: 80 ms, Fim: 90 ms
+Processo: 0, Inicio: 90 ms, Fim: 100 ms
+Processo: 1, Inicio: 100 ms, Fim: 110 ms
+Processo: 1, Inicio: 110 ms, Fim: 139 ms

@@ -95,20 +95,22 @@ class Q1 : public Fila{
 private:
 	int tPromocao;
 	int executando, tInicioExecucao;
-	queue<int> qTChegada;
+	queue<pair<int,int> > qTChegada;
+	deque<int> dq;
 public:
-	Q1(vector<Processo> * mapId = NULL, int tPromocao = 40) : Fila(mapId), tPromocao(tPromocao){
+	Q1(vector<Processo> * mapId = NULL, int tPromocao = 30) : Fila(mapId), tPromocao(tPromocao){
 		executando = 0;
 	}
 	void inserir(int pId, int tempo){
-		qPId.push(pId);
-		qTChegada.push(tempo);
+		// qPId.push(pId);
+		dq.push_back(pId);
+		qTChegada.push(make_pair(tempo, pId));
 	}
 	int tProximaPromocao(){
-		if(qPId.empty())
+		if(qTChegada.empty())
 			return INF;
 		else
-			return qTChegada.front() + tPromocao;
+			return qTChegada.front().first + tPromocao;
 	}
 	int tProximoCompleto(){
 		if(executando){
@@ -122,27 +124,52 @@ public:
 		if(executando){
 
 			gantt.inserir(executando, tInicioExecucao, tempo);
-			if(preempcao)
-				inserir(executando, tempo);
+			if(preempcao){
+				dq.push_front(executando);
+				qTChegada.push(make_pair(tempo, executando));
+			}
 
 			(*mapId)[executando].tExecutando += tempo - tInicioExecucao;
 			executando = 0;
 		}
 	}
 	void ativar(int tempo){
-		if(!executando and !qPId.empty()){
+		if(!executando and !qTChegada.empty()){
 			tInicioExecucao = tempo;
-			executando = qPId.front();
-			qPId.pop();
-			qTChegada.pop();
+			// executando = qPId.front();
+			executando = dq.front();
+			// qPId.pop();
+			dq.pop_front();
+			queue<pair<int,int> > temp;
+			while(qTChegada.empty() == false){
+				if(qTChegada.front().second != executando)
+					temp.push(qTChegada.front());
+				qTChegada.pop();	
+			}
+			while(temp.empty() == false){
+				qTChegada.push(temp.front());
+				temp.pop();
+			}
 		}
 	}
 	void promover(int tempo, Gantt & gantt, Q0 & q0){
-		int pId = qPId.front();
+		int pId = qTChegada.front().second;
 		parar(tempo, gantt, true);
 		//repassando para Q0
 		q0.inserir(pId, tempo);
-		qPId.pop();
+
+		// qPId.pop();
+		deque<int> temp;
+		while(dq.empty() == false){
+			if(dq.front() != pId)
+				temp.push_back(dq.front());
+			dq.pop_front();	
+		}
+		while(temp.empty() == false){
+			dq.push_back(temp.front());
+			temp.pop_front();
+		}
+
 		qTChegada.pop();
 		
 	}

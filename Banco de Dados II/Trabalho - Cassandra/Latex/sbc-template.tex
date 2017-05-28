@@ -97,9 +97,7 @@ primary key (discount, quantity, orderkey, linenumber, year);
 
 \end{lstlisting}
 
-Criou-se uma visão materializada em que antecipam-se as restrições \emph{where year = 1993} e \emph{where quantiy < 25} da query 1.1. A coluna \emph{discount} foi adicionada como primeira partition key devido a restrição \emph{where discount between 1 and 3}.
-
-Além disso, como a keyword \emph{between} não é aceita em CQL, a query foi adaptada para uma equivalente que faz uso da keyword \emph{in}.
+Criou-se uma visão materializada em que antecipam-se as restrições \emph{where year = 1993} e \emph{where quantiy \textless 25} da query 1.1. A coluna \emph{discount} foi adicionada como primeira partition key devido a restrição \emph{where discount between 1 and 3}.
 
 \subsection{Query otimizada para keyspace desnormalizado}
 
@@ -108,6 +106,8 @@ select sum(extendedprice*discount) as revenue
 from v1
 where discount in (1,2,3);
 \end{lstlisting}
+
+Como a keyword \emph{between} não é aceita em CQL, a query foi adaptada para uma equivalente que faz uso da keyword \emph{in}.
 
 \paragraph{Tempos das primeiras 5 consultas (em segundos)}
 \begin{enumerate}
@@ -179,7 +179,7 @@ and suppregion = 'AMERICA'
 primary key ((year, brand1), quantity, orderkey, linenumber);
 \end{lstlisting}
 
-Criou-se uma visão materializada em que antecipam-se as restrições \emph{where category = 'MFGR\#12'} e \emph{where suppregion = 'AMERICA'} da query 2.1. As colunas \emph{year} e \emph{brand1} foram selecionadas como composite partition key para que em cada operação \emph{group by} seja feita apenas uma agregação por partição.
+Criou-se uma visão materializada em que antecipam-se as restrições \emph{where category = 'MFGR\#12'} e \emph{where suppregion = 'AMERICA'} da query 2.1. As colunas \emph{year} e \emph{brand1} foram selecionadas como composite partition key para que a operação \emph{group by} seja feita em apenas uma agregação por partição.
 
 \subsection{Query otimizada para keyspace desnormalizado}
 
@@ -264,7 +264,7 @@ and year <= 1997
 primary key ((nation,year), quantity, orderkey, linenumber);
 \end{lstlisting}
 
-Criou-se uma visão materializada em que antecipam-se as restrições \emph{where region = 'ASIA' and suppregion = 'ASIA' and year \textgreater= 1992 and year \textless= 1997} da query 3.1. As colunas \emph{nation} e \emph{year} foram selecionadas como composite partition key para que em cada operação \emph{group by} sejam feitas agregações apenas para a coluna suppnation dentro de uma mesma partição.
+Criou-se uma visão materializada em que antecipam-se as restrições \emph{where region = 'ASIA' and suppregion = 'ASIA' and year \textgreater= 1992 and year \textless= 1997} da query 3.1. As colunas \emph{nation} e \emph{year} foram selecionadas como composite partition key para que a operação \emph{group by} seja executada apenas por meio de agregações na coluna suppnation em uma mesma partição.
 
 \subsection{Query otimizada para keyspace desnormalizado}
 
@@ -349,7 +349,7 @@ and mfgr <= 'MFGR#2'
 primary key ((year, nation), quantity, orderkey, linenumber);
 \end{lstlisting}
 
-Criou-se uma visão materializada em que antecipam-se as restrições \emph{where region = 'AMERICA' and suppregion = 'AMERICA' and (mfgr = 'MFGR\#1' or mfgr = 'MFGR\#2')} da query 4.1. As colunas \emph{nation} e \emph{year} foram selecionadas como composite partition key para que em cada operação \emph{group by} seja feita apenas uma agregação por partição.
+Criou-se uma visão materializada em que antecipam-se as restrições \emph{where region = 'AMERICA' and suppregion = 'AMERICA' and (mfgr = 'MFGR\#1' or mfgr = 'MFGR\#2')} da query 4.1. As colunas \emph{nation} e \emph{year} foram selecionadas como composite partition key para que a operação \emph{group by} seja feita em apenas uma agregação por partição.
 
 \subsection{Query otimizada para keyspace desnormalizado}
 
@@ -378,8 +378,8 @@ Em todas as consultas realizadas, foi possível diminuir de vinte a sessenta vez
 \begin{itemize}
     \item Mesmo com as otimizações, não são todas as queries que podem ser executadas tanto diretamente via CQL quanto via Spark devido a existência de agregações que fazem uso de \emph{group by} ou devido ao uso de \emph{order by}.
     \item Para consistência das comparações de tempo de consulta, todas elas foram realizadas pelo Spark.
-    \item Vale ressaltar que uma query otimizada para o keyspace desnormalizado pode ter resultados diferentes se realizada no spark ou diretamente em cql. Isso ocorre porque os resultados podem sofrer overflow no tipo int (4 bytes) quando realizadas no Cassandra, enquanto o Spark faz um tratamento automático do overflow, exibindo o resultado correto.
-    \item Não foram utilizados índices para as otimizações devido a elevada cardinalidade de algumas colunas, o que resultaria em um elevado overhead para executar as queries. Além disso, cada uma das consultas envolveriam o uso de múltiplos índices, o que também prejudica a performace. Por fim, para otimização, pode-se aproveitar a estrutura do modelo colunar e criar visões materializadas tais que as colunas selecionadas como partition key e clustering key ordenam os dados de maneira conveniente para cada query, o que substitui a função do índice.
+    \item Vale ressaltar que uma query otimizada para o keyspace desnormalizado pode ter resultados diferentes se realizada no spark ou diretamente em CQL. Isso ocorre porque os resultados podem sofrer overflow no tipo int (4 bytes) quando realizadas no Cassandra, enquanto o Spark faz um tratamento automático do overflow, exibindo o resultado correto.
+    \item Não foram utilizados índices para as otimizações devido a elevada cardinalidade de algumas colunas, o que resultaria em um elevado overhead para executar as queries. Além disso, cada uma das consultas envolveriam o uso de múltiplos índices, o que também prejudica a performance. Por fim, para otimização, pode-se ainda aproveitar a estrutura do modelo colunar e criar visões materializadas tais que as colunas selecionadas como partition key e clustering key ordenam os dados de maneira conveniente para cada query, o que substitui a função do índice.
 \end{itemize}
 
 \end{document}

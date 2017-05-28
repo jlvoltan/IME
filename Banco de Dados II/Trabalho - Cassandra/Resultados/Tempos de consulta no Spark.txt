@@ -1,0 +1,103 @@
+1.1
+
+CNSSB_CF
+
+a) 16.287
+b) 15.015
+c) 14.709
+d) 14.272
+e) 14.689
+
+CNSSB (consulta não otimizada)
+
+a) 7.056
+b) 7.502
+c) 6.744
+d) 6.844
+e) 7.167
+
+CNSSB (consulta otimizada)
+
+a) 0.874
+b) 0.637
+c) 0.587
+d) 0.578
+e) 0.592
+
+2.1
+
+CNSSB_CF
+
+a) 35.303
+b) 33.849
+c) 33.796
+d) 33.934
+e) 33.483
+
+CNSSB (consulta não otimizada)
+
+a) 47.462
+b) 46.744
+c) 47.026
+d) 47.478
+e) 45.609
+
+CNSSB (consulta otimizada)
+
+a) 1.076
+b) 1.079
+c) 1.029
+d) 0.974
+e) 1.005
+
+3.1
+
+CNSSB_CF
+
+a) 43.002
+b) 39.162
+c) 38.912
+d) 40.469
+e) 39.406
+
+CNSSB (consulta não otimizada)
+
+a) 60.097
+b) 45.778
+c) 40.963
+d) 40.619
+e) 41.057
+
+CNSSB (consulta otimizada)
+
+a) 1.778
+b) 1.349
+c) 1.452
+d) 1.329
+e) 1.706
+
+4.1
+
+CNSSB_CF
+
+a) 60.830
+b) 59.294
+c) 60.005
+d) 59.204
+e) 57.493
+
+CNSSB (consulta não otimizada)
+
+a) 46.181
+b) 42.990
+c) 44.039
+d) 41.293
+e) 41.012
+
+CNSSB (consulta otimizada)
+
+a) 0.985
+b) 0.851
+c) 0.794
+d) 0.802
+e) 0.810

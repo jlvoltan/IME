@@ -1,0 +1,385 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+\usepackage[brazil]{babel}   
+%\usepackage[latin1]{inputenc}  
+\usepackage[utf8]{inputenc}  
+% UTF-8 encoding is recommended by ShareLaTex
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{verde}{rgb}{0,0.5,0}
+
+%para customizar o código (ver https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings)
+\lstset{language=SQL, %defina a linguagem usada no trabalho
+              belowcaptionskip=1\baselineskip,
+                breaklines=true,
+                frame=false,
+                xleftmargin=\parindent,
+                showstringspaces=false,
+                basicstyle=\footnotesize\ttfamily,
+                keywordstyle=\bfseries\color{green!40!black},
+                commentstyle=\itshape\color{purple!40!black},
+                identifierstyle=\color{blue},
+                stringstyle=\color{orange},
+                numbers=left,
+            }
+
+\sloppy
+
+\title{Trabalho de Otimização de Consultas no Cassandra em Aplicações Analíticas}
+
+\author{Pedro Igor, Voltan, Delfino, Façanha }
+
+\address{}
+
+\begin{document} 
+
+\maketitle
+
+\section{Query 1.1}
+
+\subsection{Query para keyspace normalizado}
+
+\begin{lstlisting}
+select sum(o.extendedprice*o.discount) as revenue
+from cnssb_cf.orderFact o
+inner join cnssb_cf.date d on o.dblinenumber = d.dblinenumber
+where d.year = 1993
+and o.discount between 1 and 3
+and o.quantity < 25;
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 16.287
+\item 15.015
+\item 14.709
+\item 14.272
+\item 14.689
+\end{enumerate}
+
+\subsection{Query não otimizada para keyspace desnormalizado}
+
+\begin{lstlisting}
+select sum(extendedprice*discount) as revenue
+from nlineorder
+where year = 1993
+and discount between 1 and 3
+and quantity < 25;
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 7.056
+\item 7.502 
+\item 6.744 
+\item 6.844 
+\item 7.167
+\end{enumerate}
+
+\subsection{Tratamento da query no keyspace desnormalizado}
+
+\begin{lstlisting}
+create materialized view v1 as 
+select discount, year, quantity, orderkey, linenumber, extendedprice
+from nlineorder
+where year = 1993 
+and quantity < 25
+and orderkey is not null
+and linenumber is not null
+and discount is not null
+primary key (discount, quantity, orderkey, linenumber, year);
+
+\end{lstlisting}
+
+Criou-se uma visão materializada em que antecipam-se as restrições \emph{where year = 1993} e \emph{where quantiy < 25} da query 1.1. A coluna \emph{discount} foi adicionada como primeira partition key devido a restrição \emph{where discount between 1 and 3}.
+
+Além disso, como a keyword \emph{between} não é aceita em CQL, a query foi adaptada para uma equivalente que faz uso da keyword \emph{in}.
+
+\subsection{Query otimizada para keyspace desnormalizado}
+
+\begin{lstlisting}
+select sum(extendedprice*discount) as revenue
+from v1
+where discount in (1,2,3);
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 0.874 
+\item 0.637 
+\item 0.587 
+\item 0.578 
+\item 0.592
+\end{enumerate}
+
+\section{Query 2.1}
+
+\subsection{Query para keyspace normalizado}
+
+\begin{lstlisting}
+select sum(o.revenue), d.year, p.brand1
+from cnssb_cf.orderFact o
+inner join cnssb_cf.date d on o.dblinenumber = d.dblinenumber
+inner join cnssb_cf.part p on o.dblinenumber = p.dblinenumber 
+inner join cnssb_cf.supplier s on o.dblinenumber = s.dblinenumber
+where p.category = 'MFGR#12'
+and s.suppregion = 'AMERICA'
+group by d.year, p.brand1
+order by d.year, p.brand1;
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 35.303
+\item 33.849 
+\item 33.796 
+\item 33.934 
+\item 33.483
+\end{enumerate}
+
+\subsection{Query não otimizada para keyspace desnormalizado}
+
+\begin{lstlisting}
+select sum(revenue), year, brand1
+from nlineorder
+where category = 'MFGR#12'
+and suppregion = 'AMERICA'
+group by year, brand1
+order by year, brand1;
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 47.462 
+\item 46.744 
+\item 47.026 
+\item 47.478 
+\item 45.609
+\end{enumerate}
+
+\subsection{Tratamento da query no keyspace desnormalizado}
+
+\begin{lstlisting}
+create materialized view v2 as 
+select revenue, year, quantity, orderkey, linenumber, brand1
+from nlineorder
+where quantity is not null
+and year is not null
+and orderkey is not null
+and linenumber is not null
+and brand1 is not null
+and category = 'MFGR#12'
+and suppregion = 'AMERICA'
+primary key ((year, brand1), quantity, orderkey, linenumber);
+\end{lstlisting}
+
+Criou-se uma visão materializada em que antecipam-se as restrições \emph{where category = 'MFGR\#12'} e \emph{where suppregion = 'AMERICA'} da query 2.1. As colunas \emph{year} e \emph{brand1} foram selecionadas como composite partition key para que em cada operação \emph{group by} seja feita apenas uma agregação por partição.
+
+\subsection{Query otimizada para keyspace desnormalizado}
+
+\begin{lstlisting}
+select sum(revenue), year, brand1
+from v2
+group by year, brand1
+order by year, brand1;
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 1.076
+\item 1.079
+\item 1.029 
+\item 0.974
+\item 1.005
+\end{enumerate}
+
+\section{Query 3.1}
+
+\subsection{Query para keyspace normalizado}
+
+\begin{lstlisting}
+select c.nation, s.suppnation, d.year, sum(o.revenue)
+as revenue 
+from cnssb_cf.orderFact o
+inner join cnssb_cf.date d on o.dblinenumber = d.dblinenumber
+inner join cnssb_cf.custumer c on o.dblinenumber = c.dblinenumber 
+inner join cnssb_cf.supplier s on o.dblinenumber = s.dblinenumber
+where c.region = 'ASIA' and s.suppregion = 'ASIA'
+and d.year >= 1992 and d.year <= 1997
+group by c.nation, s.suppnation, d.year
+order by d.year asc, revenue desc; 
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 43.002
+\item 39.162
+\item 38.912
+\item 40.469
+\item 39.406
+\end{enumerate}
+
+\subsection{Query não otimizada para keyspace desnormalizado}
+
+\begin{lstlisting}
+select nation, suppnation, year, sum(revenue) as revenue 
+from nlineorder
+where region = 'ASIA' and suppregion = 'ASIA'
+and year >= 1992 and year <= 1997
+group by nation, suppnation, year
+order by year asc, revenue desc; 
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 60.097
+\item 45.778
+\item 40.963
+\item 40.619
+\item 41.057
+\end{enumerate}
+
+\subsection{Tratamento da query no keyspace desnormalizado}
+
+\begin{lstlisting}
+create materialized view v3 as 
+select nation, suppnation, year, quantity, orderkey, linenumber, revenue
+from nlineorder
+where quantity is not null
+and year is not null
+and orderkey is not null
+and linenumber is not null
+and nation is not null
+and suppnation is not null
+and region = 'ASIA'
+and suppregion = 'ASIA'
+and year >= 1992
+and year <= 1997
+primary key ((nation,year), quantity, orderkey, linenumber);
+\end{lstlisting}
+
+Criou-se uma visão materializada em que antecipam-se as restrições \emph{where region = 'ASIA' and suppregion = 'ASIA' and year \textgreater= 1992 and year \textless= 1997} da query 3.1. As colunas \emph{nation} e \emph{year} foram selecionadas como composite partition key para que em cada operação \emph{group by} sejam feitas agregações apenas para a coluna suppnation dentro de uma mesma partição.
+
+\subsection{Query otimizada para keyspace desnormalizado}
+
+\begin{lstlisting}
+select nation, suppnation, year, sum(revenue) as revenue 
+from v3
+group by nation, year, suppnation
+order by year asc, revenue desc; 
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 1.778
+\item 1.349
+\item 1.452
+\item 1.329
+\item 1.706
+\end{enumerate}
+
+\section{Query 4.1}
+
+\subsection{Query para keyspace normalizado}
+
+\begin{lstlisting}
+select d.year, c.nation, sum(o.revenue - o.supplycost) as profit 
+from cnssb_cf.orderFact o
+inner join cnssb_cf.date d on o.dblinenumber = d.dblinenumber
+inner join cnssb_cf.custumer c on o.dblinenumber = c.dblinenumber 
+inner join cnssb_cf.supplier s on o.dblinenumber = s.dblinenumber
+inner join cnssb_cf.part p on o.dblinenumber = p.dblinenumber 
+where c.region = 'AMERICA'
+and s.suppregion = 'AMERICA'
+and (p.mfgr = 'MFGR#1' or p.mfgr = 'MFGR#2')
+group by d.year, c.nation
+order by d.year, c.nation;
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 60.830
+\item 59.294
+\item 60.005 
+\item 59.204 
+\item 57.493
+\end{enumerate}
+
+\subsection{Query não otimizada para keyspace desnormalizado}
+
+\begin{lstlisting}
+select year, nation, sum(revenue - supplycost) as profit 
+from nlineorder
+where region = 'AMERICA'
+and suppregion = 'AMERICA'
+and (mfgr = 'MFGR#1' or mfgr = 'MFGR#2')
+group by year, nation
+order by year, nation;
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 46.181
+\item 42.990
+\item 44.039
+\item 41.293
+\item 41.012
+\end{enumerate}
+
+\subsection{Tratamento da query no keyspace desnormalizado}
+
+\begin{lstlisting}
+create materialized view v4 as 
+select nation, year, quantity, orderkey, linenumber, revenue, supplycost
+from nlineorder
+where quantity is not null
+and year is not null
+and orderkey is not null
+and linenumber is not null
+and nation is not null
+and region = 'AMERICA'
+and suppregion = 'AMERICA'
+and mfgr <= 'MFGR#2'
+primary key ((year, nation), quantity, orderkey, linenumber);
+\end{lstlisting}
+
+Criou-se uma visão materializada em que antecipam-se as restrições \emph{where region = 'AMERICA' and suppregion = 'AMERICA' and (mfgr = 'MFGR\#1' or mfgr = 'MFGR\#2')} da query 4.1. As colunas \emph{nation} e \emph{year} foram selecionadas como composite partition key para que em cada operação \emph{group by} seja feita apenas uma agregação por partição.
+
+\subsection{Query otimizada para keyspace desnormalizado}
+
+\begin{lstlisting}
+select year, nation, sum(revenue - supplycost) as profit 
+from v4
+group by year, nation
+order by year, nation;
+\end{lstlisting}
+
+\paragraph{Tempos das primeiras 5 consultas (em segundos)}
+\begin{enumerate}
+\item 0.985
+\item 0.851
+\item 0.794
+\item 0.802
+\item 0.810
+\end{enumerate}
+
+\section{Comparação dos tempos obtidos}
+
+Em todas as consultas realizadas, foi possível diminuir de vinte a sessenta vezes o tempo das consultas otimizadas sobre visões materializas no modelo desnormalizado em relação às consultas não otimizadas. Vale destacar que nem sempre as consultas não otimizadas sobre o modelo desnormalizado obtiveram tempos menores do que as consultas sobre o modelo normalizado.
+
+\section{Observações finais}
+
+\begin{itemize}
+    \item Mesmo com as otimizações, não são todas as queries que podem ser executadas tanto diretamente via CQL quanto via Spark devido a existência de agregações que fazem uso de \emph{group by} ou devido ao uso de \emph{order by}.
+    \item Para consistência das comparações de tempo de consulta, todas elas foram realizadas pelo Spark.
+    \item Vale ressaltar que uma query otimizada para o keyspace desnormalizado pode ter resultados diferentes se realizada no spark ou diretamente em cql. Isso ocorre porque os resultados podem sofrer overflow no tipo int (4 bytes) quando realizadas no Cassandra, enquanto o Spark faz um tratamento automático do overflow, exibindo o resultado correto.
+    \item Não foram utilizados índices para as otimizações devido a elevada cardinalidade de algumas colunas, o que resultaria em um elevado overhead para executar as queries. Além disso, cada uma das consultas envolveriam o uso de múltiplos índices, o que também prejudica a performace. Por fim, para otimização, pode-se aproveitar a estrutura do modelo colunar e criar visões materializadas tais que as colunas selecionadas como partition key e clustering key ordenam os dados de maneira conveniente para cada query, o que substitui a função do índice.
+\end{itemize}
+
+\end{document}

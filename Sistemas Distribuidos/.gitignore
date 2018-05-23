@@ -1,4 +1,4 @@
-# Byte-compiled / optimized / DLL files
+# python: Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -8,3 +8,6 @@ __pycache__/
 
 # Visual Studio
 .vscode
+
+*.swp
+*.out

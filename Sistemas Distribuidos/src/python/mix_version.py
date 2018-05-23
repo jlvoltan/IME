@@ -1,7 +1,7 @@
 import threading
 import numpy as np
 from mpi4py import MPI
-from .mpi_version import MPIVersion
+from mpi_version import MPIVersion
 
 
 class MixVersion(MPIVersion):

@@ -1,6 +1,7 @@
 import threading
 import numpy as np
-from .base_class import SistDistBase
+from base_class import SistDistBase
+
 
 class ThreadVersion(SistDistBase):
 
@@ -8,7 +9,7 @@ class ThreadVersion(SistDistBase):
         super(ThreadVersion, self).__init__(thread_count, fileName)
         self._threads = []
         self.results = []
-        
+
         for index, slice_tuple in enumerate(self.get_slices()):
             self._threads.append(threading.Thread(
                 target=self.work_and_save,

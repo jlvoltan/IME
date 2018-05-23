@@ -1,7 +1,7 @@
 Implementar um algoritmo paralelo usando MPI e threads para realizar as seguintes operações em uma matriz quadrada:
 Multiplicar os elementos de cada linha pelo elemento da diagonal da linha correspondente.
 Somar todos os elementos da matriz resultante.
-Apenas um nó vai ler a matriz de um arquivo e vai distribuir a matriz pelos nós de processamento. Esta distribuição deve ser por blocos, isto é, cada nó vai receber uma sub-matriz de mesmo tamanho. O tamanho da matriz será 16000x16000. 
+Apenas um nó vai ler a matriz de um arquivo e vai distribuir a matriz pelos nós de processamento. Esta distribuição deve ser por blocos, isto é, cada nó vai receber uma sub-matriz de mesmo tamanho. O tamanho da matriz será 16000x16000.
 No caso da divisão por 2 processadores, o tamanho das sub-matrizes será 8000X16000. E no caso da divisão por 4 processadores o tamanho das sub-matrizes será 8000X8000.
 
 Implementar as seguintes versões:

@@ -1,6 +1,7 @@
 import numpy as np
 from mpi4py import MPI
-from .base_class import SistDistBase
+from base_class import SistDistBase
+
 
 class MPIVersion(SistDistBase):
 

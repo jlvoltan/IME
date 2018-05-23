@@ -1,7 +1,7 @@
 import sys
-from src.mpi_version import MPIVersion
-from src.mix_version import MixVersion
-from src.thread_version import ThreadVersion
+from mpi_version import MPIVersion
+from mix_version import MixVersion
+from thread_version import ThreadVersion
 
 fileName = None
 

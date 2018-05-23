@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class SistDistBase:
 
     def __init__(self, partitions, fileName=None):

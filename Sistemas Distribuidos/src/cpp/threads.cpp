@@ -17,10 +17,9 @@ class SpeedupTest{
 			for(int i=0; i<dim; i++)
 				mat[i] = new double[dim];
 
-			for(int i=0; i < dim; i++){
+			for(int i=0; i < dim; i++)
 				for(int j=0; j < dim; j++)
-					mat[i][j] = generate_random();
-			}
+					mat[i][j] = generate_special_matrix(i);
 		}
 
 		~SpeedupTest(){
@@ -85,5 +84,6 @@ main(int argc,char* argv[]){
 	SpeedupTest obj;
 	int threads_count = int (argv[1][0] - '0');
 	Timer timer;
-	printf("global sum: %lf,  elapsed time: %lf\n", obj.threads_calc(threads_count), timer.get_elapsed_time());
+	printf("global sum: %lf\n", obj.threads_calc(threads_count));
+	printf("elapsed time: %lf\n", timer.get_elapsed_time());
 }

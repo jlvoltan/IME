@@ -16,7 +16,6 @@ double generate_random(){
 	return ans / max_rand;
 }
 
-
 double generate_special_matrix(int row){
 	if(row < 4000)
 		return 1;

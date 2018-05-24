@@ -15,7 +15,7 @@ class SpeedupTest{
 			for(int i=0; i < dim; i++){
 				mat[i] = new double[dim];
 				for(int j=0; j < dim; j++)
-					mat[i][j] = generate_random();
+					mat[i][j] = generate_special_matrix(i);
 			}
 		}
 
@@ -38,5 +38,6 @@ main(){
 	srand(time(NULL));
 	SpeedupTest obj;
 	Timer timer;
-	printf("global sum: %lf,  elapsed time: %lf\n", obj.work(), timer.get_elapsed_time());
+	printf("global sum: %lf\n", obj.work());
+	printf("elapsed time: %lf\n", timer.get_elapsed_time());
 }

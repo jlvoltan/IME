@@ -24,7 +24,7 @@ class SpeedupTest{
 			if(world_rank == 0){
 				for(int i=0; i < dim; i++){
 					for(int j=0; j < dim; j++)
-						mat[i][j] = generate_random();
+						mat[i][j] = generate_special_matrix(i);
 					diagonal[i] = mat[i][i];
 				}
 			}else{
@@ -104,8 +104,10 @@ main(){
 	}
 
 	MPI_Reduce(&local_sum, &global_sum, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
-	if(world_rank == 0)
-		printf("global sum: %lf,  elapsed time: %lf\n", global_sum, timer.get_elapsed_time());
+	if(world_rank == 0){
+		printf("global sum: %lf\n", global_sum);
+		printf("elapsed time: %lf\n", timer.get_elapsed_time());
+	}
 
 	MPI_Finalize();
 }

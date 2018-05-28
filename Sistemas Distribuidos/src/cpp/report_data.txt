@@ -1,0 +1,151 @@
+Normal
+global sum: 576000000.000000
+elapsed time: 1.312953
+global sum: 576000000.000000
+elapsed time: 1.325783
+global sum: 576000000.000000
+elapsed time: 1.308508
+global sum: 576000000.000000
+elapsed time: 1.327339
+global sum: 576000000.000000
+elapsed time: 1.310555
+2 Threads
+local sum: 512000000.000000,  thread id: 1
+local sum: 64000000.000000,  thread id: 0
+global sum: 576000000.000000
+elapsed time: 3.579599
+local sum: 512000000.000000,  thread id: 1
+local sum: 64000000.000000,  thread id: 0
+global sum: 576000000.000000
+elapsed time: 2.987714
+local sum: 64000000.000000,  thread id: 0
+local sum: 512000000.000000,  thread id: 1
+global sum: 576000000.000000
+elapsed time: 3.435571
+local sum: 512000000.000000,  thread id: 1
+local sum: 64000000.000000,  thread id: 0
+global sum: 576000000.000000
+elapsed time: 3.020544
+local sum: 512000000.000000,  thread id: 1
+local sum: 64000000.000000,  thread id: 0
+global sum: 576000000.000000
+elapsed time: 4.706113
+4 Threads
+local sum: 256000000.000000,  thread id: 3
+local sum: 32000000.000000,  thread id: 2
+local sum: 32000000.000000,  thread id: 0
+local sum: 256000000.000000,  thread id: 1
+global sum: 576000000.000000
+elapsed time: 4.101831
+local sum: 256000000.000000,  thread id: 1
+local sum: 32000000.000000,  thread id: 2
+local sum: 256000000.000000,  thread id: 3
+local sum: 32000000.000000,  thread id: 0
+global sum: 576000000.000000
+elapsed time: 3.289782
+local sum: 256000000.000000,  thread id: 1
+local sum: 32000000.000000,  thread id: 2
+local sum: 256000000.000000,  thread id: 3
+local sum: 32000000.000000,  thread id: 0
+global sum: 576000000.000000
+elapsed time: 3.041335
+local sum: 256000000.000000,  thread id: 1
+local sum: 32000000.000000,  thread id: 2
+local sum: 256000000.000000,  thread id: 3
+local sum: 32000000.000000,  thread id: 0
+global sum: 576000000.000000
+elapsed time: 3.171633
+local sum: 256000000.000000,  thread id: 1
+local sum: 32000000.000000,  thread id: 2
+local sum: 256000000.000000,  thread id: 3
+local sum: 32000000.000000,  thread id: 0
+global sum: 576000000.000000
+elapsed time: 3.489031
+2 MPI
+local sum: 64000000.000000, rank: 1
+local sum: 512000000.000000, rank: 2
+global sum: 576000000.000000
+elapsed time: 20.657889
+local sum: 64000000.000000, rank: 1
+local sum: 512000000.000000, rank: 2
+global sum: 576000000.000000
+elapsed time: 20.651701
+local sum: 64000000.000000, rank: 1
+local sum: 512000000.000000, rank: 2
+global sum: 576000000.000000
+elapsed time: 20.653532
+local sum: 64000000.000000, rank: 1
+local sum: 512000000.000000, rank: 2
+global sum: 576000000.000000
+elapsed time: 20.668589
+local sum: 64000000.000000, rank: 1
+local sum: 512000000.000000, rank: 2
+global sum: 576000000.000000
+elapsed time: 20.657749
+4 MPI
+local sum: 32000000.000000, rank: 1
+local sum: 256000000.000000, rank: 2
+local sum: 32000000.000000, rank: 3
+local sum: 256000000.000000, rank: 4
+global sum: 576000000.000000
+elapsed time: 17.719976
+local sum: 32000000.000000, rank: 1
+local sum: 256000000.000000, rank: 2
+local sum: 32000000.000000, rank: 3
+global sum: 576000000.000000
+elapsed time: 17.720235
+local sum: 256000000.000000, rank: 4
+local sum: 32000000.000000, rank: 1
+local sum: 256000000.000000, rank: 2
+local sum: 32000000.000000, rank: 3
+local sum: 256000000.000000, rank: 4
+global sum: 576000000.000000
+elapsed time: 17.718593
+local sum: 32000000.000000, rank: 1
+local sum: 256000000.000000, rank: 2
+local sum: 32000000.000000, rank: 3
+local sum: 256000000.000000, rank: 4
+global sum: 576000000.000000
+elapsed time: 17.719134
+local sum: 32000000.000000, rank: 1
+local sum: 256000000.000000, rank: 2
+local sum: 32000000.000000, rank: 3
+local sum: 256000000.000000, rank: 4
+global sum: 576000000.000000
+elapsed time: 17.724005
+Mix
+local sum: 32000000.000000,  thread id: 2
+local sum: 32000000.000000,  thread id: 0
+local sum: 64000000.000000, rank: 1
+global sum: 320000000.000000
+elapsed time: 20.852389
+local sum: 256000000.000000,  thread id: 1
+local sum: 256000000.000000, rank: 2
+local sum: 32000000.000000,  thread id: 2
+local sum: 32000000.000000,  thread id: 0
+local sum: 64000000.000000, rank: 1
+local sum: 256000000.000000,  thread id: 1
+local sum: 256000000.000000, rank: 2
+global sum: 320000000.000000
+elapsed time: 20.903449
+local sum: 32000000.000000,  thread id: 2
+local sum: 32000000.000000,  thread id: 0
+local sum: 64000000.000000, rank: 1
+local sum: 256000000.000000,  thread id: 1
+local sum: 256000000.000000, rank: 2
+global sum: 320000000.000000
+elapsed time: 20.917078
+local sum: 32000000.000000,  thread id: 2
+local sum: 32000000.000000,  thread id: 0
+local sum: 64000000.000000, rank: 1
+local sum: 256000000.000000,  thread id: 1
+local sum: 256000000.000000, rank: 2
+global sum: 320000000.000000
+elapsed time: 20.929668
+local sum: 32000000.000000,  thread id: 2
+local sum: 32000000.000000,  thread id: 0
+local sum: 64000000.000000, rank: 1
+local sum: 256000000.000000,  thread id: 1
+local sum: 256000000.000000, rank: 2
+global sum: 320000000.000000
+elapsed time: 20.917038

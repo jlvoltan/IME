@@ -11,14 +11,14 @@ and open the template in the editor.
             <dataNascimento>11/07/1990</dataNascimento>
             <email>jlvoltan@hotmail.com</email>
             <endereco>
-                <rua>Aquidabã</rua>
-                <numero>320</numero>
-                <complemento>Apt 403 Bloco 2</complemento>
+                <rua>Eslobodã</rua>
+                <numero>450</numero>
+                <complemento>Apt 410 Bloco 2</complemento>
                 <cidade>Rio de Janeiro</cidade>
-                <bairro>Meier</bairro>
+                <bairro>Tijuca</bairro>
                 <estado>RJ</estado>
             </endereco>
-            <CPF>11910416703</CPF>
+            <CPF>22910742703</CPF>
         </infopessoal>
     </cabecalho>
     <formacao>

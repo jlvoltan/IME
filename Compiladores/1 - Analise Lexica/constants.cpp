@@ -25,7 +25,7 @@ struct t_const{
     }
 };
 
-class Literais{
+class Constants{
 public:
     vector<t_const> vConsts; // nNumConsts == vConsts.size()
 
@@ -51,10 +51,3 @@ public:
         return vConsts[n]._.sVal;
     }
 };
-
-main(){
-    Literals x;
-    char str[] = "string";
-    x.addStringConst(str);
-    cout << x.getStringConst(0);
-}

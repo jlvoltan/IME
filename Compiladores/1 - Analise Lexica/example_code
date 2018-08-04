@@ -1,6 +1,0 @@
-var x string
-
-if(9 > 1)
-    x = "exemplo 1"
-else
-    x = "exemplo 2"

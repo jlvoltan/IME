@@ -1,1 +1,0 @@
-Compilador para uma linguagem exemplo chamada Simple Script Language. Esta linguagem segue uma sintaxe baseada em ECMA script, assim como javascript e wmlscript.

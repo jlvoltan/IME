@@ -7,9 +7,9 @@ and open the template in the editor.
 <curriculo>
     <cabecalho>
         <infopessoal>
-            <nomeCompleto>José Luiz Neves Voltan</nomeCompleto>
-            <dataNascimento>11/07/1990</dataNascimento>
-            <email>jlvoltan@hotmail.com</email>
+            <nomeCompleto>José Luiz da Silva</nomeCompleto>
+            <dataNascimento>21/10/1990</dataNascimento>
+            <email>jlroma@hotmail.com</email>
             <endereco>
                 <rua>Eslobodã</rua>
                 <numero>450</numero>
